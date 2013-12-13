@@ -1,49 +1,40 @@
 package biblioteca;
 
 public class Item {
-
-	private String titulo;
-	private String ano_publicacao;
-	private String editora;
-
-	public String getTitulo() {
-		return this.titulo;
-	}
-
-	/**
-	 * 
-	 * @param titulo
-	 */
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
-
-	public String getAno_publicacao() {
-		return this.ano_publicacao;
-	}
-
-	/**
-	 * 
-	 * @param ano_pub
-	 */
-	public void setAno_publicacao(String ano_pub) {
-		this.ano_publicacao = ano_pub;
-	}
-
-	public String getEditora() {
-		return this.editora;
-	}
-
-	/**
-	 * 
-	 * @param editora
-	 */
-	public void setEditora(String editora) {
-		this.editora = editora;
-	}
-
-	public Item() {
-		throw new UnsupportedOperationException();
-	}
-
+    protected int numero;
+    protected String titulo;
+    protected int ano;
+    protected String editora;
+    public String getTitulo()
+    {
+        return this.titulo;
+    }
+    public int getAno()
+    {
+        return this.ano;
+    }
+    public String getEditora()
+    {
+        return this.editora;
+    }
+    public int getNumero()
+    {
+        return this.numero;
+    }
+    public void setNumero(int x)
+    {
+        this.numero=x;
+    }
+    public void setTitulo(String x)
+    {
+        this.titulo=x;
+    }
+    public void setAno(int x)
+    {
+        this.ano=x;
+    }
+    public void setEditora(String x)
+    {
+        this.editora=x;
+    }
 }
