@@ -75,20 +75,6 @@ class Gestor {
             }
             return ocorrencias;
         }
-
-        public 
-        
-	public ArrayList <Item> getItens() {
-		return this.itens;
-	}
-
-	/**
-	 * 
-	 * @param itens
-	 */
-	public void setItens(ArrayList <Item> itens) {
-		this.itens = itens;
-	}
         
         /**
          * Retorna a requisição com o número passado por paramentro.
@@ -109,7 +95,6 @@ class Gestor {
             }
             return null;
 	}
-<<<<<<< HEAD
         /*
          *Retorna o Item Pelo seu número
          */
@@ -161,7 +146,6 @@ class Gestor {
         {
             this.itens.add(x);
         }
-=======
         
         /**
          * Retorna uma lista de objectos de Requisicao onde há ocorrencias de numero
@@ -183,7 +167,6 @@ class Gestor {
             return ocorrencias;            
         }
 
->>>>>>> origin/master
 	/**
 	 * Adiciona uma requisição à colecção
          * Retorna true caso seja adicionada com sucesso
