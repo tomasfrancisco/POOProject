@@ -110,6 +110,61 @@ class Gestor {
             return null;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        /*
+         *Retorna o Item Pelo seu número
+         */
+        public Item getItem(int numero)
+        {
+            Item x=null; 
+            for(int i=0;i<this.itens.size();i++)
+            {
+                if((x=this.itens.get(i)).getNumero()==numero)
+                {
+                   return  x;
+                }
+            }
+            return x;
+        }
+        /*
+         *Remove o item da ArrayList pelo numero
+         */
+        public boolean RemoveItem(int numero)
+        {
+            Item x=null;
+            for(int i=0;i<this.itens.size();i++)
+            {
+                if((x=this.itens.get(i)).getNumero()==numero)
+                {
+                    return this.itens.remove(x);
+                }
+            }
+            return false;
+        }
+        /*
+         *Pesquisa o item no ArrayList pelo seu nome
+         */
+        public void PesquisaItem(String nome)
+        {
+            Item x=null;
+            for(int i=0;i<this.itens.size();i++)
+            {
+                if((x=this.itens.get(i)).getTitulo().indexOf(nome)!=-1)
+                {
+                    System.out.println(x.toString());
+                }
+            }
+        }
+        /*
+         *Adiciona um item ao ArrayList de Itens
+         */
+        public void setItem(Item x)
+        {
+            this.itens.add(x);
+        }
+=======
+>>>>>>> a28eeb42d25524d4422f9a3e86af6a8e72ad619c
         
         /**
          * Retorna uma lista de objectos de Requisicao onde há ocorrencias de numero
@@ -131,6 +186,7 @@ class Gestor {
             return ocorrencias;            
         }
 
+<<<<<<< HEAD
 =======
         /*
          *Retorna o Item Pelo seu número
@@ -184,6 +240,9 @@ class Gestor {
             this.itens.add(x);
         }
 >>>>>>> Novas funcoes
+=======
+>>>>>>> origin/master
+>>>>>>> a28eeb42d25524d4422f9a3e86af6a8e72ad619c
 	/**
 	 * Adiciona uma requisição à colecção
          * Retorna true caso seja adicionada com sucesso
