@@ -4,21 +4,33 @@ import java.util.*;
 
 class Gestor {
 
-	private ArrayList <Utilizador> utilizadores;
-	private ArrayList <Item> itens;
-	private ArrayList <Requisicao> requisicoes;
+	private final ArrayList <Utilizador> utilizadores = new ArrayList();
+	private final ArrayList <Item> itens = new ArrayList();
+	private final ArrayList <Requisicao> requisicoes = new ArrayList();
 
 	public ArrayList <Utilizador> getUtilizadores() {
 		return this.utilizadores;
 	}
 
 	/**
-	 * 
+	 * Adiciona um utilizador à colecção
+         * Retorna true caso seja adicionado com sucesso
 	 * @param utilizador
 	 */
-	public void setUtilizador(Utilizador utilizador) {
-		this.utilizadores.add(utilizador);
+	public boolean setUtilizador(Utilizador utilizador) {
+		return this.utilizadores.add(utilizador);
 	}
+        
+        /**
+         * Remove o objecto utilizador da colecção
+         * Caso tenha sido removido devolve true, caso não tenha encontrado devolve false
+         * @param utilizador
+         * @return 
+         */
+        public boolean removeUtilizador(Utilizador utilizador)
+        {
+            return this.utilizadores.remove(utilizador);
+        }
         
         /**
          * Retorna o utilizador com o numero dado como parametro do método.
@@ -36,27 +48,36 @@ class Gestor {
                 {
                     return utilizador;
                 }
-                else
-                    return null;
             }
             return null;
         }
         
-        public Utilizador getUtilizador(String nome)
+        /**
+         * Retorna uma lista de objectos de Utilizador onde há ocorrencias de ocorre
+         * Permite a procura por nome ou por telefone de utilizador
+         * @param nome
+         * @return 
+         */
+        public ArrayList <Utilizador> getUtilizador(String ocorre)
         {
-            ArrayList <Utilizador> ocorrencias;
+            ArrayList <Utilizador> ocorrencias = new ArrayList();
             Utilizador utilizador;
             for(int i = 0; i < this.utilizadores.size(); i++)
             {
-                if((utilizador = this.utilizadores.get(i)).getNome().indexOf(nome) != -1)
+                if((utilizador = this.utilizadores.get(i)).getNome().indexOf(ocorre) != -1)
                 {
                     ocorrencias.add(utilizador);
                 }
-                else
-                    return null;
+                else if((utilizador = this.utilizadores.get(i)).getTelefone().indexOf(ocorre) != -1)
+                {
+                   ocorrencias.add(utilizador);
+                }
             }
+            return ocorrencias;
         }
 
+        public 
+        
 	public ArrayList <Item> getItens() {
 		return this.itens;
 	}
@@ -70,7 +91,7 @@ class Gestor {
 	}
         
         /**
-         * Retorna a requisição com o número passado por paramentro do método.
+         * Retorna a requisição com o número passado por paramentro.
          * Caso a requisicao com o número dado não seja encontrada é retornado null
          * @param numero
          * @return 
@@ -85,11 +106,10 @@ class Gestor {
                 {
                     return requisicao;
                 }
-                else
-                    return null;
             }
             return null;
 	}
+<<<<<<< HEAD
         /*
          *Retorna o Item Pelo seu número
          */
@@ -141,23 +161,50 @@ class Gestor {
         {
             this.itens.add(x);
         }
+=======
+        
+        /**
+         * Retorna uma lista de objectos de Requisicao onde há ocorrencias de numero
+         * @param numero
+         * @return 
+         */
+        public ArrayList <Requisicao> getRequisicoesUtilizador(int numero)
+        {
+            ArrayList <Requisicao> ocorrencias = new ArrayList();
+            Requisicao requisicao;
+            
+            for(int i = 0; i < this.requisicoes.size(); i++)
+            {
+                if((requisicao = this.requisicoes.get(i)).getUtilizador().getNumero() == numero)
+                {
+                    ocorrencias.add(requisicao);
+                }
+            }
+            return ocorrencias;            
+        }
+
+>>>>>>> origin/master
 	/**
-	 * 
+	 * Adiciona uma requisição à colecção
+         * Retorna true caso seja adicionada com sucesso
 	 * @param requisicoes
 	 */
-	public void setRequisicao(Requisicao requisicao) {
-		this.requisicoes.add(requisicao);
+	public boolean setRequisicao(Requisicao requisicao) {
+            return this.requisicoes.add(requisicao);
 	}
+        
+        /**
+         * Remove o objecto requisicao da colecção
+         * Caso tenha sido removido devolve true, caso não tenha encontrado devolve false
+         * @param requisicao
+         * @return 
+         */
+        public boolean removeRequisicao(Requisicao requisicao)
+        {
+            return this.requisicoes.remove(requisicao);
+        }
 
 	public Gestor() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void removerUtilizador() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void pesquisarUtilizador() {
 		throw new UnsupportedOperationException();
 	}
 
@@ -174,14 +221,6 @@ class Gestor {
 	}
 
 	public void listarItens() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void removerRequisicao() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void pesquisarRequisicao() {
 		throw new UnsupportedOperationException();
 	}
 
