@@ -6,8 +6,9 @@ class Livro extends Item{
     private int isbn;
     private ArrayList <Autor> autores=new ArrayList();
     private String cota;
-    Livro(String titulo, int ano, String editora, int isbn, String cota)
+    Livro(int numero,String titulo, int ano, String editora, int isbn, String cota)
     {
+        super.numero=numero;
         super.editora=editora;
         super.titulo=titulo;
         super.ano=ano;

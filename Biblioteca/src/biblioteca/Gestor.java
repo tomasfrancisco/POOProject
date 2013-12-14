@@ -128,7 +128,7 @@ class Gestor {
         /*
          *Pesquisa o item no ArrayList pelo seu nome
          */
-        public void PesquisaItem(String nome)
+        public void pesquisaItem(String nome)
         {
             Item x=null;
             for(int i=0;i<this.itens.size();i++)
@@ -190,41 +190,44 @@ class Gestor {
 	public Gestor() {
 		throw new UnsupportedOperationException();
 	}
-
-	public void listarUtilizadores() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void removerItem() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void pesquisarItem() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void listarItens() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void listarRequisicoes() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void consultar() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void requisitar() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void entregar() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void eliminar() {
-		throw new UnsupportedOperationException();
-	}
+        /**
+         * Identifica os itens que nao foram requisitados no mes e ano inseridos
+         * @param String mes
+         * @param String ano
+         * @return 
+         */
+        public ArrayList<Item> nReq(String mes, String ano)
+        {
+            ArrayList <Item> nreqs=new ArrayList() ;
+            for(int i=0;i<this.itens.size();i++)
+            {
+                boolean ver=true;
+                for(int j=0;j<this.requisicoes.size();j++)
+                {
+                    String []data=this.requisicoes.get(j).getData().split("\\s");
+                    if((data[1]==mes)&&(data[2]==ano))
+                    {
+                        if(this.itens.get(i).getNumero()==this.requisicoes.get(j).getItem().getNumero())
+                        {
+                            ver=false;
+                            break;
+                        }
+                    }
+                }
+                if(ver==true)
+                    {
+                        nreqs.add(this.itens.get(i));
+                    }
+            }
+            return nreqs;
+        }
+        /*public ArrayList<Item> reqMomento(String dia, String mes, String ano)
+        {
+            ArrayList <Item> nreqs=new ArrayList() ;
+            for()
+            return nreqs;
+        }*/
+        
+        
 
 }
