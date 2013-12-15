@@ -187,10 +187,28 @@ class Gestor {
         {
             return this.requisicoes.remove(requisicao);
         }
+        
+        /*public Item getTopOne(String mes, String ano)
+        {
+            Item top;
+            StringTokenizer data;
+            int[] ocorrencias = new int[this.itens.size()];
+            
+            for(int i = 0; i < this.requisicoes.size(); i++)
+            {
+                data = new StringTokenizer(requisicoes.get(i).getData(), "/", false); //A data é dividida por tokens delimitados por "/" (false -> não retorna o delimitador)
+                data.nextToken();   //Despreza o campo dia
+                if(data.nextToken().indexOf(mes) != -1)
+                {
+                    ocorrencias[this.itens.indexOf(requisicoes.get(i).getItem())] += 1;
+                }
+            }
+        }*/
 
 	public Gestor() {
 		throw new UnsupportedOperationException();
 	}
+<<<<<<< HEAD
         
         /**
          * Metodo que Procura a existência de requisicoes e devolve array caso nao encontre nenhuma, no mes do ano inseridos
@@ -310,4 +328,6 @@ class Gestor {
         }
         
 
+=======
+>>>>>>> update
 }
