@@ -75,20 +75,6 @@ class Gestor {
             }
             return ocorrencias;
         }
-
-        public 
-        
-	public ArrayList <Item> getItens() {
-		return this.itens;
-	}
-
-	/**
-	 * 
-	 * @param itens
-	 */
-	public void setItens(ArrayList <Item> itens) {
-		this.itens = itens;
-	}
         
         /**
          * Retorna a requisição com o número passado por paramentro.

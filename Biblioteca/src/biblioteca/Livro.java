@@ -20,18 +20,6 @@ public class Livro extends Item {
 		this.isbn = isbn;
 	}
 
-	public String getAutor() {
-		return this.autor;
-	}
-
-	/**
-	 * 
-	 * @param autor
-	 */
-	public void setAutor(String autor) {
-		this.autor = autor;
-	}
-
 	public String getCota() {
 		return this.cota;
 	}
