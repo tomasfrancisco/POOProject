@@ -3,7 +3,11 @@ package biblioteca;
 import java.util.*;
 
 class Gestor {
-
+ 
+        public static void main(String[] args) {
+            
+        }   
+        
 	private final ArrayList <Utilizador> utilizadores = new ArrayList();
 	private final ArrayList <Item> itens = new ArrayList();
 	private final ArrayList <Requisicao> requisicoes = new ArrayList();
