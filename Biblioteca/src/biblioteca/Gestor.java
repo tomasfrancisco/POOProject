@@ -191,41 +191,123 @@ class Gestor {
 	public Gestor() {
 		throw new UnsupportedOperationException();
 	}
-
-	public void listarUtilizadores() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void removerItem() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void pesquisarItem() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void listarItens() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void listarRequisicoes() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void consultar() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void requisitar() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void entregar() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void eliminar() {
-		throw new UnsupportedOperationException();
-	}
+        
+        /**
+         * Metodo que Procura a existência de requisicoes e devolve array caso nao encontre nenhuma, no mes do ano inseridos
+         * @param mes
+         * @param ano
+         * @return 
+         */
+	public ArrayList <Item> nRequesitados(int mes, int ano)
+        {
+            ArrayList <Item> nre=new ArrayList ();
+            for(int i=0;i<this.itens.size();i++)
+            {
+                boolean ver=false;
+                for(int j=0;j<this.requisicoes.size();j++)
+                {
+                    Date dt=this.requisicoes.get(j).getData();
+                    if((dt.getMonth()==mes)&&(dt.getYear()==ano)&&(this.itens.get(i)==this.requisicoes.get(j).getItem()))
+                    {
+                        ver=true;
+                        break;
+                    }
+                }
+                if(ver==false)
+                    nre.add(this.itens.get(i));
+            }
+            return nre;
+        }
+         /**
+         * Este metodo devolve num arraylist todos os itens que apresentam uma data de entrega nula
+         * @return 
+         */
+        public ArrayList<Item> itensRequisitados()
+        {
+            ArrayList <Item> item=new ArrayList();
+            for(int i=0;i<this.requisicoes.size();i++)
+            {
+                if(this.requisicoes.get(i).getDataEnt()==null)
+                    item.add(this.requisicoes.get(i).getItem());
+            }
+            return item;
+        }
+         /**
+         * Este metodo retorna num arraulist todos os itens atrasados
+         * @param livro /Recebe como parametro de entrada o indicador se pretende listar livros (true) ou dvds (false)
+         * @param data/ Refere se a data acutal
+         * @return 
+         */
+        public ArrayList <Item> itensAtrasados(boolean livro)
+        {
+            Date dt= new Date ();
+            ArrayList <Item> res=new ArrayList();
+            for(int i=0;i<this.requisicoes.size();i++)
+            {
+                if(((livro==true)&&(this.requisicoes.get(i).getItem().getClass().getName().equals("Livro")))||((livro==false)&&(this.requisicoes.get(i).getItem().getClass().getName().equals("Dvd"))))
+                {
+                    if((this.requisicoes.get(i).getUtilizador().getTipo()==1)&&(this.requisicoes.get(i).getDataEnt()==null))
+                    {
+                        if(dt.compareTo(somaData(this.requisicoes.get(i).getData(),5))>0)/*NUMERO MAGICO A SER ALTERADO*/
+                                {
+                                    res.add(this.requisicoes.get(i).getItem());
+                                }
+                    }
+                    else if(this.requisicoes.get(i).getUtilizador().getTipo()==2&&(this.requisicoes.get(i).getDataEnt()==null))
+                    {
+                        if(dt.compareTo(somaData(this.requisicoes.get(i).getData(),92))>0)/*NUMERO MAGICO A SER ALTERADO*/
+                                {
+                                    res.add(this.requisicoes.get(i).getItem());
+                                }
+                    }
+                }
+            }
+            return res;
+        }
+         /**
+         * Este metodo tem como funcao adicionar os dias a uma determinada data
+         * @param data
+         * @param dias
+         * @return 
+         */
+        public Date somaData(Date data, int dias)
+        {
+            Calendar cal = Calendar.getInstance();    
+            cal.set(Calendar.DAY_OF_MONTH, data.getDay());
+            cal.set(Calendar.MONTH, data.getMonth());
+            cal.set(Calendar.YEAR, data.getYear());   
+            cal.add(Calendar.DAY_OF_MONTH, dias);
+            return new Date(cal.get(1)-1900,cal.get(2)-1,cal.get(5));
+        }
+         /**
+         * Numero médio de requisicoes e numero maximo de reqeuisicoes
+         * @param mes
+         * @return 
+         */
+        public void estatistica(int mes, int ano)
+        {
+            int diamax=0;
+            int reqdiamax=0;
+            int somarequisicoes=0;
+            for(int i=1;i<31;i++)
+            {
+                int reqdia=0;
+                for(int j=0;j<this.requisicoes.size();j++)
+                {
+                    if((this.requisicoes.get(j).getData().getMonth()==mes)&&(this.requisicoes.get(j).getData().getYear()==ano))
+                    {
+                        somarequisicoes++;
+                        reqdia++;
+                    }
+                }
+                if(reqdia>reqdiamax)
+                {
+                    reqdiamax=reqdia;
+                    diamax=i;
+                }
+            }
+            System.out.println("Numero médio de Requisicoes por dia :"+somarequisicoes/30+"\nDia em que houve mais requisicoes: "+diamax+"; Com "+reqdiamax+" requisicoes");
+        }
+        
 
 }
