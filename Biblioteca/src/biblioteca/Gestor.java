@@ -208,7 +208,6 @@ class Gestor {
 	public Gestor() {
 		throw new UnsupportedOperationException();
 	}
-<<<<<<< HEAD
         
         /**
          * Metodo que Procura a existência de requisicoes e devolve array caso nao encontre nenhuma, no mes do ano inseridos
@@ -326,8 +325,5 @@ class Gestor {
             }
             System.out.println("Numero médio de Requisicoes por dia :"+somarequisicoes/30+"\nDia em que houve mais requisicoes: "+diamax+"; Com "+reqdiamax+" requisicoes");
         }
-        
-
-=======
->>>>>>> update
+       
 }
