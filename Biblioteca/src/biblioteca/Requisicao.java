@@ -7,6 +7,16 @@ class Requisicao {
 	private Utilizador utilizador;
 	private Date data;
         private Date dataentrega=null;
+        
+        
+        public Requisicao(Item item, Utilizador utilizador, int ano, int mes, int dia, int numero) 
+        {
+            this.item = item;
+            this.utilizador = utilizador;
+            this.data = new Date((ano-1900),(mes-1),dia);
+            this.numero = numero;
+	}
+        
 	public int getNumero() {
 		return this.numero;
 	}
@@ -67,10 +77,6 @@ class Requisicao {
             this.dataentrega=new Date((ano-1900),(mes-1),dia);
         }
 
-	public Requisicao(Item item, Utilizador utilizador, int ano, int mes, int dia) {
-            this.item = item;
-            this.utilizador = utilizador;
-            this.data = new Date((ano-1900),(mes-1),dia);
-	}
+	
 
 }

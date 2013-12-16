@@ -3,18 +3,20 @@ package biblioteca;
 import java.util.*;
 
 class Livro extends Item{
-    private int isbn;
+    private String isbn;
     private ArrayList <Autor> autores=new ArrayList();
     private String cota;
-    Livro(String titulo, int ano, String editora, int isbn, String cota)
+    
+    Livro(String titulo, int ano, String editora, String isbn, String cota, int numero)
     {
         super.editora=editora;
         super.titulo=titulo;
         super.ano=ano;
         this.isbn=isbn;
         this.cota=cota;
+        super.numero = numero;
     }
-   public int getIsbn()
+   public String getIsbn()
    {
        return this.isbn;
    }
@@ -30,7 +32,7 @@ class Livro extends Item{
    {
        this.autores.add(x);
    }
-   public void setIsbn( int x)
+   public void setIsbn(String x)
    {
        this.isbn=x;
    }

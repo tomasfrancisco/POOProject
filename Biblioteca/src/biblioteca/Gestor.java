@@ -4,10 +4,16 @@ import java.util.*;
 
 class Gestor {
 
-	private final ArrayList <Utilizador> utilizadores = new ArrayList();
-	private final ArrayList <Item> itens = new ArrayList();
-	private final ArrayList <Requisicao> requisicoes = new ArrayList();
-        private final ArrayList <Requisicao> entregas = new ArrayList();
+	private ArrayList <Utilizador> utilizadores;
+	private ArrayList <Item> itens;
+	private ArrayList <Requisicao> requisicoes;
+        
+        
+	public Gestor() {
+            this.utilizadores = new ArrayList();
+            this.itens = new ArrayList();
+            this.requisicoes = new ArrayList();
+	}
 
 	public ArrayList <Utilizador> getUtilizadores() {
 		return this.utilizadores;
@@ -56,10 +62,10 @@ class Gestor {
         /**
          * Retorna uma lista de objectos de Utilizador onde há ocorrencias de ocorre
          * Permite a procura por nome ou por telefone de utilizador
-         * @param nome
+         * @param ocorre
          * @return 
          */
-        public ArrayList <Utilizador> getUtilizador(String ocorre)
+        ArrayList <Utilizador> getUtilizador(String ocorre)
         {
             ArrayList <Utilizador> ocorrencias = new ArrayList();
             Utilizador utilizador;
@@ -201,17 +207,23 @@ class Gestor {
             int max = 0;
             int[] contador = new int[this.itens.size()];
             
+            System.out.println("get");
             /**
              * Obtém o número de ocorrências dos itens
              */
             for(int i = 0; i < this.requisicoes.size(); i++)
             {
                 Date data = this.requisicoes.get(i).getData();
+                System.out.println(data.getDate());
                 Item item = this.requisicoes.get(i).getItem();
+                System.out.println(requisicoes.get(i).getData());
+                System.out.println(data.getYear());
                 if(data.getYear() == ano)
                 {
+                    System.out.println("aqui");
                     if(data.getMonth() == mes)
                     {
+                        System.out.println("add counter");
                         contador[this.itens.indexOf(item)] += 1;
                     }
                 }
@@ -224,6 +236,7 @@ class Gestor {
             {
                 if(contador[i] > max)
                 {
+                    System.out.println("add top");
                     top.add(this.itens.get(i));
                 }
             }        
@@ -232,9 +245,6 @@ class Gestor {
         
         
 
-	public Gestor() {
-		throw new UnsupportedOperationException();
-	}
         
         /**
          * Metodo que Procura a existência de requisicoes e devolve array caso nao encontre nenhuma, no mes do ano inseridos
@@ -262,6 +272,7 @@ class Gestor {
             }
             return nre;
         }
+        
          /**
          * Este metodo devolve num arraylist todos os itens que apresentam uma data de entrega nula
          * @return 
@@ -276,6 +287,7 @@ class Gestor {
             }
             return item;
         }
+        
          /**
          * Este metodo retorna num arraulist todos os itens atrasados
          * @param livro /Recebe como parametro de entrada o indicador se pretende listar livros (true) ou dvds (false)
