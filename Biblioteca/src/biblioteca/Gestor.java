@@ -189,6 +189,12 @@ class Gestor {
             return this.requisicoes.remove(requisicao);
         }
         
+        /**
+         * Retorna os itens mais requisitados do mes e ano passados por parametro
+         * @param mes
+         * @param ano
+         * @return 
+         */
         public ArrayList <Item> getTopOne(int mes, int ano)
         {
             ArrayList <Item> top = new ArrayList();
@@ -223,6 +229,8 @@ class Gestor {
             }        
             return top;
         }
+        
+        
 
 	public Gestor() {
 		throw new UnsupportedOperationException();
