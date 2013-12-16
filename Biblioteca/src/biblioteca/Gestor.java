@@ -207,23 +207,17 @@ class Gestor {
             int max = 0;
             int[] contador = new int[this.itens.size()];
             
-            System.out.println("get");
             /**
              * Obtém o número de ocorrências dos itens
              */
             for(int i = 0; i < this.requisicoes.size(); i++)
             {
                 Date data = this.requisicoes.get(i).getData();
-                System.out.println(data.getDate());
                 Item item = this.requisicoes.get(i).getItem();
-                System.out.println(requisicoes.get(i).getData());
-                System.out.println(data.getYear());
-                if(data.getYear() == ano)
+                if((data.getYear() + 1900) == ano)
                 {
-                    System.out.println("aqui");
-                    if(data.getMonth() == mes)
+                    if((data.getMonth() + 1) == mes)
                     {
-                        System.out.println("add counter");
                         contador[this.itens.indexOf(item)] += 1;
                     }
                 }
@@ -236,7 +230,6 @@ class Gestor {
             {
                 if(contador[i] > max)
                 {
-                    System.out.println("add top");
                     top.add(this.itens.get(i));
                 }
             }        
