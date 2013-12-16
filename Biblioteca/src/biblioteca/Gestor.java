@@ -7,6 +7,7 @@ class Gestor {
 	private final ArrayList <Utilizador> utilizadores = new ArrayList();
 	private final ArrayList <Item> itens = new ArrayList();
 	private final ArrayList <Requisicao> requisicoes = new ArrayList();
+        private final ArrayList <Requisicao> entregas = new ArrayList();
 
 	public ArrayList <Utilizador> getUtilizadores() {
 		return this.utilizadores;
@@ -188,22 +189,40 @@ class Gestor {
             return this.requisicoes.remove(requisicao);
         }
         
-        /*public Item getTopOne(String mes, String ano)
+        public ArrayList <Item> getTopOne(int mes, int ano)
         {
-            Item top;
-            StringTokenizer data;
-            int[] ocorrencias = new int[this.itens.size()];
+            ArrayList <Item> top = new ArrayList();
+            int max = 0;
+            int[] contador = new int[this.itens.size()];
             
+            /**
+             * Obtém o número de ocorrências dos itens
+             */
             for(int i = 0; i < this.requisicoes.size(); i++)
             {
-                data = new StringTokenizer(requisicoes.get(i).getData(), "/", false); //A data é dividida por tokens delimitados por "/" (false -> não retorna o delimitador)
-                data.nextToken();   //Despreza o campo dia
-                if(data.nextToken().indexOf(mes) != -1)
+                Date data = this.requisicoes.get(i).getData();
+                Item item = this.requisicoes.get(i).getItem();
+                if(data.getYear() == ano)
                 {
-                    ocorrencias[this.itens.indexOf(requisicoes.get(i).getItem())] += 1;
+                    if(data.getMonth() == mes)
+                    {
+                        contador[this.itens.indexOf(item)] += 1;
+                    }
                 }
             }
-        }*/
+            
+            /**
+             * Obtém o objecto com mais requisições
+             */
+            for(int i = 0; i < contador.length; i++)
+            {
+                if(contador[i] > max)
+                {
+                    top.add(this.itens.get(i));
+                }
+            }        
+            return top;
+        }
 
 	public Gestor() {
 		throw new UnsupportedOperationException();

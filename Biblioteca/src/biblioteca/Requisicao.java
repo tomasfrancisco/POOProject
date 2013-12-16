@@ -67,7 +67,7 @@ class Requisicao {
             this.dataentrega=new Date((ano-1900),(mes-1),dia);
         }
 
-	public Requisicao(Item item, Utilizador utilizador, int ano, int mes , int dia) {
+	public Requisicao(Item item, Utilizador utilizador, int ano, int mes, int dia) {
             this.item = item;
             this.utilizador = utilizador;
             this.data = new Date((ano-1900),(mes-1),dia);
