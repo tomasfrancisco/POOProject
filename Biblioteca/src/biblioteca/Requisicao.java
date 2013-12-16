@@ -1,12 +1,12 @@
 package biblioteca;
-
+import java.util.*;
 class Requisicao {
 
 	private int numero;
 	private Item item;
 	private Utilizador utilizador;
-	private String data;
-
+	private Date data;
+        private Date dataentrega=null;
 	public int getNumero() {
 		return this.numero;
 	}
@@ -43,7 +43,7 @@ class Requisicao {
 		this.utilizador = utilizador;
 	}
 
-	public String getData() {
+	public Date getData() {
 		return this.data;
 	}
 
@@ -51,14 +51,26 @@ class Requisicao {
 	 * 
 	 * @param data
 	 */
-	public void setData(String data) {
-		this.data = data;
+	public void setData(int ano, int mes , int dia) {
+		this.data = new Date((ano-1900),(mes-1),dia);
 	}
+        /**
+	 * 
+	 * @param data
+	 */
+        public Date getDataEnt()
+        {
+            return this.dataentrega;
+        }
+        public void setDataEnt(int ano, int mes , int dia)
+        {
+            this.dataentrega=new Date((ano-1900),(mes-1),dia);
+        }
 
-	public Requisicao(Item item, Utilizador utilizador, String data) {
+	public Requisicao(Item item, Utilizador utilizador, int ano, int mes, int dia) {
             this.item = item;
             this.utilizador = utilizador;
-            this.data = data;
+            this.data = new Date((ano-1900),(mes-1),dia);
 	}
 
 }
