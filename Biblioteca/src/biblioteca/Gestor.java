@@ -2,21 +2,15 @@ package biblioteca;
 
 import java.util.*;
 
-class Gestor {
+abstract class Gestor {
 
-	private ArrayList <Utilizador> utilizadores;
-	private ArrayList <Item> itens;
-	private ArrayList <Requisicao> requisicoes;
+	private static final ArrayList <Utilizador> utilizadores = new ArrayList();
+	private static final ArrayList <Item> itens = new ArrayList();
+	private static final ArrayList <Requisicao> requisicoes = new ArrayList();
         
-        
-	public Gestor() {
-            this.utilizadores = new ArrayList();
-            this.itens = new ArrayList();
-            this.requisicoes = new ArrayList();
-	}
 
-	public ArrayList <Utilizador> getUtilizadores() {
-		return this.utilizadores;
+	public static ArrayList <Utilizador> getUtilizadores() {
+		return utilizadores;
 	}
 
 	/**
@@ -24,8 +18,8 @@ class Gestor {
          * Retorna true caso seja adicionado com sucesso
 	 * @param utilizador
 	 */
-	public boolean setUtilizador(Utilizador utilizador) {
-		return this.utilizadores.add(utilizador);
+	public static boolean setUtilizador(Utilizador utilizador) {
+		return utilizadores.add(utilizador);
 	}
         
         /**
@@ -34,9 +28,9 @@ class Gestor {
          * @param utilizador
          * @return 
          */
-        public boolean removeUtilizador(Utilizador utilizador)
+        public static boolean removeUtilizador(Utilizador utilizador)
         {
-            return this.utilizadores.remove(utilizador);
+            return utilizadores.remove(utilizador);
         }
         
         /**
@@ -45,13 +39,13 @@ class Gestor {
          * @param numero
          * @return 
          */
-        public Utilizador getUtilizador(int numero)
+        public static Utilizador getUtilizador(int numero)
         {
             Utilizador utilizador;
             
-            for(int i = 0; i < this.utilizadores.size(); i++)
+            for(int i = 0; i < utilizadores.size(); i++)
             {
-                if((utilizador = this.utilizadores.get(i)).getNumero() == numero)
+                if((utilizador = utilizadores.get(i)).getNumero() == numero)
                 {
                     return utilizador;
                 }
@@ -65,17 +59,17 @@ class Gestor {
          * @param ocorre
          * @return 
          */
-        ArrayList <Utilizador> getUtilizador(String ocorre)
+        public static ArrayList <Utilizador> getUtilizador(String ocorre)
         {
             ArrayList <Utilizador> ocorrencias = new ArrayList();
             Utilizador utilizador;
-            for(int i = 0; i < this.utilizadores.size(); i++)
+            for(int i = 0; i < utilizadores.size(); i++)
             {
-                if((utilizador = this.utilizadores.get(i)).getNome().indexOf(ocorre) != -1)
+                if((utilizador = utilizadores.get(i)).getNome().indexOf(ocorre) != -1)
                 {
                     ocorrencias.add(utilizador);
                 }
-                else if((utilizador = this.utilizadores.get(i)).getTelefone().indexOf(ocorre) != -1)
+                else if((utilizador = utilizadores.get(i)).getTelefone().indexOf(ocorre) != -1)
                 {
                    ocorrencias.add(utilizador);
                 }
@@ -89,13 +83,13 @@ class Gestor {
          * @param numero
          * @return 
          */
-	public Requisicao getRequisicao(int numero)
+	public static Requisicao getRequisicao(int numero)
         {
             Requisicao requisicao;
                 
-            for(int i = 0; i < this.requisicoes.size(); i++)
+            for(int i = 0; i < requisicoes.size(); i++)
             {
-                if((requisicao = this.requisicoes.get(i)).getNumero() == numero)
+                if((requisicao = requisicoes.get(i)).getNumero() == numero)
                 {
                     return requisicao;
                 }
@@ -106,29 +100,30 @@ class Gestor {
         /*
          *Retorna o Item Pelo seu número
          */
-        public Item getItem(int numero)
+        public static Item getItem(int numero)
         {
             Item x=null; 
-            for(int i=0;i<this.itens.size();i++)
+            for(int i = 0;i < itens.size(); i++)
             {
-                if((x=this.itens.get(i)).getNumero()==numero)
+                if((x = itens.get(i)).getNumero() == numero)
                 {
                    return  x;
                 }
             }
             return x;
         }
+        
         /*
          *Remove o item da ArrayList pelo numero
          */
-        public boolean RemoveItem(int numero)
+        public static boolean RemoveItem(int numero)
         {
-            Item x=null;
-            for(int i=0;i<this.itens.size();i++)
+            Item x = null;
+            for(int i = 0; i < itens.size(); i++)
             {
-                if((x=this.itens.get(i)).getNumero()==numero)
+                if((x = itens.get(i)).getNumero() == numero)
                 {
-                    return this.itens.remove(x);
+                    return itens.remove(x);
                 }
             }
             return false;
@@ -136,12 +131,12 @@ class Gestor {
         /*
          *Pesquisa o item no ArrayList pelo seu nome
          */
-        public void PesquisaItem(String nome)
+        public static void PesquisaItem(String nome)
         {
-            Item x=null;
-            for(int i=0;i<this.itens.size();i++)
+            Item x = null;
+            for(int i = 0; i < itens.size(); i++)
             {
-                if((x=this.itens.get(i)).getTitulo().indexOf(nome)!=-1)
+                if((x = itens.get(i)).getTitulo().indexOf(nome)!=-1)
                 {
                     System.out.println(x.toString());
                 }
@@ -150,9 +145,9 @@ class Gestor {
         /*
          *Adiciona um item ao ArrayList de Itens
          */
-        public void setItem(Item x)
+        public static void setItem(Item x)
         {
-            this.itens.add(x);
+            itens.add(x);
         }
         
         /**
@@ -160,14 +155,14 @@ class Gestor {
          * @param numero
          * @return 
          */
-        public ArrayList <Requisicao> getRequisicoesUtilizador(int numero)
+        public static ArrayList <Requisicao> getRequisicoesUtilizador(int numero)
         {
             ArrayList <Requisicao> ocorrencias = new ArrayList();
             Requisicao requisicao;
             
-            for(int i = 0; i < this.requisicoes.size(); i++)
+            for(int i = 0; i < requisicoes.size(); i++)
             {
-                if((requisicao = this.requisicoes.get(i)).getUtilizador().getNumero() == numero)
+                if((requisicao = requisicoes.get(i)).getUtilizador().getNumero() == numero)
                 {
                     ocorrencias.add(requisicao);
                 }
@@ -180,8 +175,8 @@ class Gestor {
          * Retorna true caso seja adicionada com sucesso
 	 * @param requisicoes
 	 */
-	public boolean setRequisicao(Requisicao requisicao) {
-            return this.requisicoes.add(requisicao);
+	public static boolean setRequisicao(Requisicao requisicao) {
+            return requisicoes.add(requisicao);
 	}
         
         /**
@@ -190,9 +185,9 @@ class Gestor {
          * @param requisicao
          * @return 
          */
-        public boolean removeRequisicao(Requisicao requisicao)
+        public static boolean removeRequisicao(Requisicao requisicao)
         {
-            return this.requisicoes.remove(requisicao);
+            return requisicoes.remove(requisicao);
         }
         
         /**
@@ -201,24 +196,24 @@ class Gestor {
          * @param ano
          * @return 
          */
-        public ArrayList <Item> getTopOne(int mes, int ano)
+        public static ArrayList <Item> getTopOne(int mes, int ano)
         {
             ArrayList <Item> top = new ArrayList();
             int max = 0;
-            int[] contador = new int[this.itens.size()];
+            int[] contador = new int[itens.size()];
             
             /**
              * Obtém o número de ocorrências dos itens
              */
-            for(int i = 0; i < this.requisicoes.size(); i++)
+            for(int i = 0; i < requisicoes.size(); i++)
             {
-                Date data = this.requisicoes.get(i).getData();
-                Item item = this.requisicoes.get(i).getItem();
+                Date data = requisicoes.get(i).getData();
+                Item item = requisicoes.get(i).getItem();
                 if((data.getYear() + 1900) == ano)
                 {
                     if((data.getMonth() + 1) == mes)
                     {
-                        contador[this.itens.indexOf(item)] += 1;
+                        contador[itens.indexOf(item)] += 1;
                     }
                 }
             }
@@ -230,7 +225,7 @@ class Gestor {
             {
                 if(contador[i] > max)
                 {
-                    top.add(this.itens.get(i));
+                    top.add(itens.get(i));
                 }
             }        
             return top;
@@ -245,23 +240,23 @@ class Gestor {
          * @param ano
          * @return 
          */
-	public ArrayList <Item> nRequesitados(int mes, int ano)
+	public static ArrayList <Item> nRequesitados(int mes, int ano)
         {
             ArrayList <Item> nre=new ArrayList ();
-            for(int i=0;i<this.itens.size();i++)
+            for(int i = 0; i < itens.size(); i++)
             {
-                boolean ver=false;
-                for(int j=0;j<this.requisicoes.size();j++)
+                boolean ver = false;
+                for(int j = 0; j < requisicoes.size();j++)
                 {
-                    Date dt=this.requisicoes.get(j).getData();
-                    if((dt.getMonth()==mes)&&(dt.getYear()==ano)&&(this.itens.get(i)==this.requisicoes.get(j).getItem()))
+                    Date dt = requisicoes.get(j).getData();
+                    if((dt.getMonth()==mes)&&(dt.getYear()==ano)&&(itens.get(i)==requisicoes.get(j).getItem()))
                     {
                         ver=true;
                         break;
                     }
                 }
                 if(ver==false)
-                    nre.add(this.itens.get(i));
+                    nre.add(itens.get(i));
             }
             return nre;
         }
@@ -270,13 +265,13 @@ class Gestor {
          * Este metodo devolve num arraylist todos os itens que apresentam uma data de entrega nula
          * @return 
          */
-        public ArrayList<Item> itensRequisitados()
+        public static ArrayList<Item> itensRequisitados()
         {
             ArrayList <Item> item=new ArrayList();
-            for(int i=0;i<this.requisicoes.size();i++)
+            for(int i=0;i<requisicoes.size();i++)
             {
-                if(this.requisicoes.get(i).getDataEnt()==null)
-                    item.add(this.requisicoes.get(i).getItem());
+                if(requisicoes.get(i).getDataEnt()==null)
+                    item.add(requisicoes.get(i).getItem());
             }
             return item;
         }
@@ -287,26 +282,26 @@ class Gestor {
          * @param data/ Refere se a data acutal
          * @return 
          */
-        public ArrayList <Item> itensAtrasados(boolean livro)
+        public static ArrayList <Item> itensAtrasados(boolean livro)
         {
             Date dt= new Date ();
             ArrayList <Item> res=new ArrayList();
-            for(int i=0;i<this.requisicoes.size();i++)
+            for(int i=0;i<requisicoes.size();i++)
             {
-                if(((livro==true)&&(this.requisicoes.get(i).getItem().getClass().getName().equals("Livro")))||((livro==false)&&(this.requisicoes.get(i).getItem().getClass().getName().equals("Dvd"))))
+                if(((livro==true)&&(requisicoes.get(i).getItem().getClass().getName().equals("Livro")))||((livro==false)&&(requisicoes.get(i).getItem().getClass().getName().equals("Dvd"))))
                 {
-                    if((this.requisicoes.get(i).getUtilizador().getTipo()==1)&&(this.requisicoes.get(i).getDataEnt()==null))
+                    if((requisicoes.get(i).getUtilizador().getTipo()==1)&&(requisicoes.get(i).getDataEnt()==null))
                     {
-                        if(dt.compareTo(somaData(this.requisicoes.get(i).getData(),5))>0)/*NUMERO MAGICO A SER ALTERADO*/
+                        if(dt.compareTo(somaData(requisicoes.get(i).getData(),5))>0)/*NUMERO MAGICO A SER ALTERADO*/
                                 {
-                                    res.add(this.requisicoes.get(i).getItem());
+                                    res.add(requisicoes.get(i).getItem());
                                 }
                     }
-                    else if(this.requisicoes.get(i).getUtilizador().getTipo()==2&&(this.requisicoes.get(i).getDataEnt()==null))
+                    else if(requisicoes.get(i).getUtilizador().getTipo()==2&&(requisicoes.get(i).getDataEnt()==null))
                     {
-                        if(dt.compareTo(somaData(this.requisicoes.get(i).getData(),92))>0)/*NUMERO MAGICO A SER ALTERADO*/
+                        if(dt.compareTo(somaData(requisicoes.get(i).getData(),92))>0)/*NUMERO MAGICO A SER ALTERADO*/
                                 {
-                                    res.add(this.requisicoes.get(i).getItem());
+                                    res.add(requisicoes.get(i).getItem());
                                 }
                     }
                 }
@@ -319,7 +314,7 @@ class Gestor {
          * @param dias
          * @return 
          */
-        public Date somaData(Date data, int dias)
+        public static Date somaData(Date data, int dias)
         {
             Calendar cal = Calendar.getInstance();    
             cal.set(Calendar.DAY_OF_MONTH, data.getDay());
@@ -328,12 +323,13 @@ class Gestor {
             cal.add(Calendar.DAY_OF_MONTH, dias);
             return new Date(cal.get(1)-1900,cal.get(2)-1,cal.get(5));
         }
+        
          /**
          * Numero médio de requisicoes e numero maximo de reqeuisicoes
          * @param mes
          * @return 
          */
-        public void estatistica(int mes, int ano)
+        public static void estatistica(int mes, int ano)
         {
             int diamax=0;
             int reqdiamax=0;
@@ -341,9 +337,9 @@ class Gestor {
             for(int i=1;i<31;i++)
             {
                 int reqdia=0;
-                for(int j=0;j<this.requisicoes.size();j++)
+                for(int j=0;j<requisicoes.size();j++)
                 {
-                    if((this.requisicoes.get(j).getData().getMonth()==mes)&&(this.requisicoes.get(j).getData().getYear()==ano))
+                    if((requisicoes.get(j).getData().getMonth()==mes)&&(requisicoes.get(j).getData().getYear()==ano))
                     {
                         somarequisicoes++;
                         reqdia++;

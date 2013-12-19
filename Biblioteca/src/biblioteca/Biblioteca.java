@@ -23,21 +23,21 @@ public class Biblioteca {
     public static void main(String[] args) 
     {
         
-        Gestor biblioteca = new Gestor();
-        ArrayList <Utilizador> user = new ArrayList();
+        
+        ArrayList <Utilizador> user;
+        
         
         Utilizador tomas = new Leitor("Tomás Francisco", "Paul", "968158474", "mail@tomasfrancisco.com", "15/05/1994", "tfrancisco", "tomas1994", ALUNO);
         Item livro = new Livro("Titulo", 2000, "Editora", "20192019201910", "PL6", 1);
         Requisicao req1 = new Requisicao(livro, tomas, 2013, 12, 23, 1); 
+       
+        
+        Gestor.setUtilizador(tomas);
+        Gestor.setItem(livro);
+        Gestor.setRequisicao(req1);
         
         
-        
-        biblioteca.setUtilizador(tomas);
-        biblioteca.setItem(livro);
-        biblioteca.setRequisicao(req1);
-        
-        
-        user = biblioteca.getUtilizador("Tomás Francisco");
+        user = Gestor.getUtilizador("Tomás Francisco");
         
         for(int i = 0; i < user.size(); i++)
         {
@@ -45,9 +45,9 @@ public class Biblioteca {
             System.out.println(user.get(i).getData_nascimento());
         }
         
-        ArrayList <Item> top = new ArrayList();
+        ArrayList <Item> top;
         
-        top = biblioteca.getTopOne(12, 2013);
+        top = Gestor.getTopOne(12, 2013);
         
         for(int i = 0; i < top.size(); i++)
         {
