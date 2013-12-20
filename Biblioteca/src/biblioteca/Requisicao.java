@@ -7,6 +7,19 @@ class Requisicao {
 	private Utilizador utilizador;
 	private Date data;
         private Date dataentrega=null;
+<<<<<<< HEAD
+=======
+        
+        
+        public Requisicao(Item item, Utilizador utilizador, int ano, int mes, int dia, int numero) 
+        {
+            this.item = item;
+            this.utilizador = utilizador;
+            this.data = new Date((ano-1900),(mes-1),dia);
+            this.numero = numero;
+	}
+        
+>>>>>>> origin/master
 	public int getNumero() {
 		return this.numero;
 	}
@@ -52,7 +65,11 @@ class Requisicao {
 	 * @param data
 	 */
 	public void setData(int ano, int mes , int dia) {
+<<<<<<< HEAD
 		this.data = new Date((ano-1900),(mes),dia);
+=======
+		this.data = new Date((ano-1900),(mes-1),dia);
+>>>>>>> origin/master
 	}
         /**
 	 * 
@@ -64,6 +81,7 @@ class Requisicao {
         }
         public void setDataEnt(int ano, int mes , int dia)
         {
+<<<<<<< HEAD
             this.dataentrega=new Date((ano-1900),(mes),dia);
         }
 
@@ -72,5 +90,11 @@ class Requisicao {
             this.utilizador = utilizador;
             this.data = new Date((ano-1900),(mes),dia);
 	}
+=======
+            this.dataentrega=new Date((ano-1900),(mes-1),dia);
+        }
+
+	
+>>>>>>> origin/master
 
 }

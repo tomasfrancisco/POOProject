@@ -1,10 +1,6 @@
 package biblioteca;
 
 abstract class Utilizador {
-        protected static final int ALUNO = 1;
-        protected static final int PROF = 2;
-        protected static final int ADMIN = 3;
-        protected static final int ERRO = -1;
     
 	protected String nome;
 	protected int numero;
@@ -15,6 +11,11 @@ abstract class Utilizador {
 	protected String username;
 	protected String password;
 	protected int tipo;
+        
+        protected static final int ALUNO = 1;
+        protected static final int PROF = 2;
+        protected static final int ADMIN = 3;
+        protected static final int ERRO = -1;
         
       
 	public String getNome() {
