@@ -3,7 +3,7 @@ package biblioteca;
 abstract class Utilizador {
     
 	protected String nome;
-	protected int numero;
+	protected double numero;
 	protected String morada;
 	protected String telefone;
 	protected String email;
@@ -30,7 +30,7 @@ abstract class Utilizador {
 		this.nome = nome;
 	}
 
-	public int getNumero() {
+	public double getNumero() {
 		return this.numero;
 	}
 
@@ -38,7 +38,7 @@ abstract class Utilizador {
 	 * 
 	 * @param numero
 	 */
-	public void setNumero(int numero) {
+	public void setNumero(double numero) {
 		this.numero = numero;
 	}
 

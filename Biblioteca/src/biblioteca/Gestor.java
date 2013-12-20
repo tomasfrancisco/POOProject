@@ -4,12 +4,26 @@ import java.util.*;
 
 abstract class Gestor {
 
+        protected static final int ALUNO = 1;
+        protected static final int PROF = 2;
+        protected static final int ADMIN = 3;
+        protected static final int ERRO = -1;
+        
 	private static final ArrayList <Utilizador> utilizadores = new ArrayList();
 	private static final ArrayList <Item> itens = new ArrayList();
 	private static final ArrayList <Requisicao> requisicoes = new ArrayList();
         
-
-	public static ArrayList <Utilizador> getUtilizadores() {
+        private static double numero_admin = 0;
+        private static double numero_leitor = 0;
+        private static double numero_requisicao = 0;
+        private static double numero_item = 0;
+        
+        /**
+         * 
+         * @return 
+         */
+	public static ArrayList <Utilizador> getUtilizadores()
+        {
 		return utilizadores;
 	}
 
@@ -18,8 +32,22 @@ abstract class Gestor {
          * Retorna true caso seja adicionado com sucesso
 	 * @param utilizador
 	 */
-	public static boolean setUtilizador(Utilizador utilizador) {
-		return utilizadores.add(utilizador);
+	public static boolean setUtilizador(Utilizador utilizador) 
+        {
+            if((utilizador.getNumero() == ALUNO) || (utilizador.getNumero() == PROF))
+            {
+                utilizador.setNumero(numero_leitor);
+                numero_leitor++;
+            }
+            else if(utilizador.getNumero() == ADMIN)
+            {
+                utilizador.setNumero(numero_admin);
+                numero_admin++;
+            }
+            else
+                return false;
+            
+            return utilizadores.add(utilizador);
 	}
         
         /**
@@ -97,8 +125,10 @@ abstract class Gestor {
             return null;
 	}
 
-        /*
-         *Retorna o Item Pelo seu número
+        /**
+         * Retorna o Item Pelo seu número
+         * @param numero
+         * @return 
          */
         public static Item getItem(int numero)
         {
@@ -113,8 +143,10 @@ abstract class Gestor {
             return x;
         }
         
-        /*
-         *Remove o item da ArrayList pelo numero
+        /**
+         * Remove o item da ArrayList pelo numero
+         * @param numero
+         * @return 
          */
         public static boolean RemoveItem(int numero)
         {
@@ -128,8 +160,10 @@ abstract class Gestor {
             }
             return false;
         }
-        /*
-         *Pesquisa o item no ArrayList pelo seu nome
+        
+        /**
+         * Pesquisa o item no ArrayList pelo seu nome
+         * @param nome 
          */
         public static void PesquisaItem(String nome)
         {
@@ -142,11 +176,15 @@ abstract class Gestor {
                 }
             }
         }
-        /*
-         *Adiciona um item ao ArrayList de Itens
+        
+        /**
+         * Adiciona um item ao ArrayList de Itens
+         * @param x 
          */
         public static void setItem(Item x)
         {
+            x.setNumero(numero_item);
+            numero_item++;
             itens.add(x);
         }
         
@@ -175,7 +213,10 @@ abstract class Gestor {
          * Retorna true caso seja adicionada com sucesso
 	 * @param requisicoes
 	 */
-	public static boolean setRequisicao(Requisicao requisicao) {
+	public static boolean setRequisicao(Requisicao requisicao)
+        {
+            requisicao.setNumero(numero_requisicao);
+            numero_requisicao++;
             return requisicoes.add(requisicao);
 	}
         
@@ -231,9 +272,6 @@ abstract class Gestor {
             return top;
         }
         
-        
-
-        
         /**
          * Metodo que Procura a existência de requisicoes e devolve array caso nao encontre nenhuma, no mes do ano inseridos
          * @param mes
@@ -261,7 +299,7 @@ abstract class Gestor {
             return nre;
         }
         
-         /**
+        /**
          * Este metodo devolve num arraylist todos os itens que apresentam uma data de entrega nula
          * @return 
          */
@@ -276,7 +314,7 @@ abstract class Gestor {
             return item;
         }
         
-         /**
+       /**
          * Este metodo retorna num arraulist todos os itens atrasados
          * @param livro /Recebe como parametro de entrada o indicador se pretende listar livros (true) ou dvds (false)
          * @param data/ Refere se a data acutal
@@ -308,7 +346,8 @@ abstract class Gestor {
             }
             return res;
         }
-         /**
+        
+        /**
          * Este metodo tem como funcao adicionar os dias a uma determinada data
          * @param data
          * @param dias
@@ -324,7 +363,7 @@ abstract class Gestor {
             return new Date(cal.get(1)-1900,cal.get(2)-1,cal.get(5));
         }
         
-         /**
+       /**
          * Numero médio de requisicoes e numero maximo de reqeuisicoes
          * @param mes
          * @return 
@@ -352,6 +391,5 @@ abstract class Gestor {
                 }
             }
             System.out.println("Numero médio de Requisicoes por dia :"+somarequisicoes/30+"\nDia em que houve mais requisicoes: "+diamax+"; Com "+reqdiamax+" requisicoes");
-        }
-       
+        }       
 }

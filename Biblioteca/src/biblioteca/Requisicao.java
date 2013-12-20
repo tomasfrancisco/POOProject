@@ -2,7 +2,7 @@ package biblioteca;
 import java.util.*;
 class Requisicao {
 
-	private int numero;
+	private double numero;
 	private Item item;
 	private Utilizador utilizador;
 	private Date data;
@@ -17,7 +17,7 @@ class Requisicao {
             this.numero = numero;
 	}
         
-	public int getNumero() {
+	public double getNumero() {
 		return this.numero;
 	}
 
@@ -25,7 +25,7 @@ class Requisicao {
          * 
          * @param numero 
          */
-	public void setNumero(int numero) {
+	public void setNumero(double numero) {
 		this.numero = numero;
 	}
 

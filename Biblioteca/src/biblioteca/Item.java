@@ -1,7 +1,7 @@
 package biblioteca;
 
 public class Item {
-    protected int numero;
+    protected double numero;
     protected String titulo;
     protected int ano;
     protected String editora;
@@ -19,11 +19,11 @@ public class Item {
     {
         return this.editora;
     }
-    public int getNumero()
+    public double getNumero()
     {
         return this.numero;
     }
-    public void setNumero(int x)
+    public void setNumero(double x)
     {
         this.numero=x;
     }
