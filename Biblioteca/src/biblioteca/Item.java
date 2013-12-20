@@ -5,6 +5,8 @@ public class Item {
     protected String titulo;
     protected int ano;
     protected String editora;
+    
+    
     public String getTitulo()
     {
         return this.titulo;
