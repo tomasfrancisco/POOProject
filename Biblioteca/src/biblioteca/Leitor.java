@@ -38,9 +38,10 @@ class Leitor extends Utilizador {
             return ERRO;         
 	}
 
-	Leitor(String nome, String morada, String telefone, String email, String data_nascimento, String username, String password, int tipo)
+	Leitor(String nome, String genero, String morada, String telefone, String email, String data_nascimento, String username, String password, int tipo)
         {
             super.setNome(nome);
+            super.setGenero(genero);
             super.setMorada(morada);
             super.setTelefone(telefone);
             super.setEmail(email);
