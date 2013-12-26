@@ -4,10 +4,10 @@ import java.util.*;
 
 abstract class Gestor {
 
-        protected static final int ALUNO = 1;
-        protected static final int PROF = 2;
-        protected static final int ADMIN = 3;
-        protected static final int ERRO = -1;
+        private static final int ALUNO = 1;
+        private static final int PROF = 2;
+        private static final int ADMIN = 3;
+        private static final int ERRO = -1;
         
 	private static final ArrayList <Utilizador> utilizadores = new ArrayList();
 	private static final ArrayList <Item> itens = new ArrayList();
@@ -34,19 +34,19 @@ abstract class Gestor {
 	 */
 	public static boolean setUtilizador(Utilizador utilizador) 
         {
-            if((utilizador.getNumero() == ALUNO) || (utilizador.getNumero() == PROF))
+            if((utilizador.getTipo() == ALUNO) || (utilizador.getTipo() == PROF))
             {
                 utilizador.setNumero(numero_leitor);
                 numero_leitor++;
             }
-            else if(utilizador.getNumero() == ADMIN)
+            else if(utilizador.getTipo() == ADMIN)
             {
                 utilizador.setNumero(numero_admin);
                 numero_admin++;
             }
             else
                 return false;
-            
+                       
             return utilizadores.add(utilizador);
 	}
         

@@ -3,6 +3,7 @@ package biblioteca;
 abstract class Utilizador {
     
 	protected String nome;
+        protected String genero;
 	protected double numero;
 	protected String morada;
 	protected String telefone;
@@ -29,6 +30,16 @@ abstract class Utilizador {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+        
+        public String getGenero()
+        {
+            return this.genero;
+        }
+        
+        public void setGenero(String genero)
+        {
+            this.genero = genero;
+        }
 
 	public double getNumero() {
 		return this.numero;
