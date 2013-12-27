@@ -735,6 +735,7 @@ public class BibliotecaGUI extends javax.swing.JFrame {
             {
                 this.setContentPane(this.menuLeitor);
             }
+            avisoemailrepetido.setText("");
         }
         else
         {
@@ -773,6 +774,7 @@ public class BibliotecaGUI extends javax.swing.JFrame {
             genero = "ERRO";
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         Utilizador novoUtilizador = new Leitor(nomeCompleto, genero, "NULL", "NULL", "NULL", "NULL", eMail, dataNascimento, "NULL", password, ALUNO);
         Gestor.setUtilizador(novoUtilizador);
@@ -782,6 +784,9 @@ public class BibliotecaGUI extends javax.swing.JFrame {
 
 =======
         if(verificaEmail(eMail)==false)
+=======
+        if(biblioteca.Gestor.verificaEmail(eMail)==false)
+>>>>>>> origin/joel
         {
             avisoemailrepetido.setText("O Email Inserido já se Encontra Resgitado!");
             System.out.println("Registo não foi efectuado com sucesso!");
@@ -790,6 +795,7 @@ public class BibliotecaGUI extends javax.swing.JFrame {
         {
             Utilizador novoUtilizador = new Leitor(nomeCompleto, genero, "NULL", "NULL", "NULL", "NULL", eMail, dataNascimento, "NULL", password, ALUNO);
             Gestor.setUtilizador(novoUtilizador);
+            avisoemailrepetido.setText("Registo efectuado com sucesso!");        
             System.out.println("Registo efectuado com sucesso!");        
         }
     }//GEN-LAST:event_registarActionPerformed
@@ -798,6 +804,7 @@ public class BibliotecaGUI extends javax.swing.JFrame {
      * @param email
      * @return 
      */
+<<<<<<< HEAD
     private boolean verificaEmail(String email)
     {
         for(int i=0;i<Gestor.getUtilizadores().size();i++)        
@@ -807,6 +814,9 @@ public class BibliotecaGUI extends javax.swing.JFrame {
         }
         return true;
     }    
+>>>>>>> origin/joel
+=======
+       
 >>>>>>> origin/joel
     private void anteriorCompletarRegistoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anteriorCompletarRegistoActionPerformed
         // TODO add your handling code here:
@@ -858,6 +868,7 @@ public class BibliotecaGUI extends javax.swing.JFrame {
         String telefone = this.telefoneField.getText();
         String usernameDef = this.usernameDefField.getText();
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         Utilizador user = Gestor.getUtilizador(eMail);
         user.setMorada(morada);
@@ -886,20 +897,33 @@ public class BibliotecaGUI extends javax.swing.JFrame {
     private boolean verificaUserTelefone(String user,String telefone)
     {
         for(int i=0;i<Gestor.getUtilizadores().size();i++)        
+=======
+        if(biblioteca.Gestor.verificaUser(usernameDef)==true)
+>>>>>>> origin/joel
         {
-            if(Gestor.getUtilizadores().get(i).getUsername().equals(user))
+            if(biblioteca.Gestor.verificaTelefone(telefone)==true)
             {
-                erroRegisto.setText("O Nome de Utilizador já se encontra ocupado");
-                return false;
+                Utilizador user = Gestor.getUtilizador(eMail);
+                user.setMorada(morada);
+                user.setCodigo_postal(codigo_postal);
+                user.setLocalidade(localidade);
+                user.setTelefone(telefone);
+                user.setUsername(usernameDef);            
+                this.setContentPane(this.menuLeitor);
+                erroRegisto.setText("");
             }
-            else if(Gestor.getUtilizadores().get(i).getTelefone().equals(telefone))
-            {
-                erroRegisto.setText("O Número de Telefone já se encontra ocupado");
-                return false;
-            }
+            else
+                erroRegisto.setText("O Telefone já se encontra ocupado");
         }
+<<<<<<< HEAD
         return true;
     }    
+>>>>>>> origin/joel
+=======
+        else
+            erroRegisto.setText("O Nome de Utilizador já se encontra ocupado");
+    }//GEN-LAST:event_seguinteCompletarRegistoActionPerformed
+     
 >>>>>>> origin/joel
     private void terminarSessaoLeitorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terminarSessaoLeitorActionPerformed
         // TODO add your handling code here:
