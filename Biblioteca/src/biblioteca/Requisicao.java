@@ -2,17 +2,11 @@ package biblioteca;
 import java.util.*;
 class Requisicao {
 
-<<<<<<< HEAD
-	private double numero;
-	private Item item;
-	private Utilizador utilizador;
-	private Date data;
-=======
+
         private double numero;
         private Item item;
         private Utilizador utilizador;
         private Date data;
->>>>>>> origin/joel
         private Date dataentrega=null;
         
         
@@ -23,30 +17,18 @@ class Requisicao {
             this.data = new Date((ano-1900),(mes-1),dia);
             this.numero = numero;
         }
-        
-<<<<<<< HEAD
-	public double getNumero() {
-		return this.numero;
-	}
-=======
+
         public double getNumero() {
                 return this.numero;
         }
->>>>>>> origin/joel
 
         /**
          * 
          * @param numero 
          */
-<<<<<<< HEAD
-	public void setNumero(double numero) {
-		this.numero = numero;
-	}
-=======
         public void setNumero(double numero) {
                 this.numero = numero;
         }
->>>>>>> origin/joel
 
         public Item getItem() {
                 return this.item;

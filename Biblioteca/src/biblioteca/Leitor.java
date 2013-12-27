@@ -38,11 +38,8 @@ class Leitor extends Utilizador {
             return ERRO;         
         }
 
-<<<<<<< HEAD
-	Leitor(String nome, String genero, String morada, String codigo_postal, String localidade, String telefone, String email, String data_nascimento, String username, String password, int tipo)
-=======
+
         Leitor(String nome, String genero, String morada, String codigo_postal, String localidade, String telefone, String email, String data_nascimento, String username, String password, int tipo)
->>>>>>> origin/joel
         {
             super.setNome(nome);
             super.setGenero(genero);

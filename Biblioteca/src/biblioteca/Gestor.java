@@ -8,19 +8,11 @@ abstract class Gestor {
         private static final int PROF = 2;
         private static final int ADMIN = 3;
         private static final int ERRO = -1;
-<<<<<<< HEAD
-        
-	private static final ArrayList <Utilizador> utilizadores = new ArrayList();
-	private static final ArrayList <Item> itens = new ArrayList();
-	private static final ArrayList <Requisicao> requisicoes = new ArrayList();
-        
-=======
         
         private static final ArrayList <Utilizador> utilizadores = new ArrayList();
         private static final ArrayList <Item> itens = new ArrayList();
         private static final ArrayList <Requisicao> requisicoes = new ArrayList();
-        
->>>>>>> origin/joel
+
         private static double numero_admin = 0;
         private static double numero_leitor = 0;
         private static double numero_requisicao = 0;
@@ -30,19 +22,7 @@ abstract class Gestor {
          * 
          * @return 
          */
-<<<<<<< HEAD
-	public static ArrayList <Utilizador> getUtilizadores()
-        {
-		return utilizadores;
-	}
-
-	/**
-	 * Adiciona um utilizador à colecção
-         * Retorna true caso seja adicionado com sucesso
-	 * @param utilizador
-	 */
-	public static boolean setUtilizador(Utilizador utilizador) 
-=======
+        
         public static ArrayList <Utilizador> getUtilizadores()
         {
                 return utilizadores;
@@ -54,7 +34,6 @@ abstract class Gestor {
          * @param utilizador
          */
         public static boolean setUtilizador(Utilizador utilizador) 
->>>>>>> origin/joel
         {
             if((utilizador.getTipo() == ALUNO) || (utilizador.getTipo() == PROF))
             {
@@ -70,11 +49,7 @@ abstract class Gestor {
                 return false;
                        
             return utilizadores.add(utilizador);
-<<<<<<< HEAD
-	}
-=======
         }
->>>>>>> origin/joel
         
         /**
          * Remove o objecto utilizador da colecção
@@ -260,15 +235,10 @@ abstract class Gestor {
         /**
          * Adiciona uma requisição à colecção
          * Retorna true caso seja adicionada com sucesso
-<<<<<<< HEAD
-	 * @param requisicoes
-	 */
-	public static boolean setRequisicao(Requisicao requisicao)
-=======
+
          * @param requisicoes
          */
         public static boolean setRequisicao(Requisicao requisicao)
->>>>>>> origin/joel
         {
             requisicao.setNumero(numero_requisicao);
             numero_requisicao++;
@@ -446,15 +416,8 @@ abstract class Gestor {
                 }
             }
             System.out.println("Numero médio de Requisicoes por dia :"+somarequisicoes/30+"\nDia em que houve mais requisicoes: "+diamax+"; Com "+reqdiamax+" requisicoes");
-<<<<<<< HEAD
-        }       
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/joel
-=======
         }
+        
         /**
          * Este Metodo tem como funcao a verificacao se 
          * @param user
@@ -493,4 +456,4 @@ abstract class Gestor {
             return true;
         } 
 }
->>>>>>> origin/joel
+
