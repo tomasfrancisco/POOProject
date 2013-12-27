@@ -107,6 +107,7 @@
                       <Component id="mainImage" max="32767" attributes="0"/>
                       <Component id="autenticacaoLabel" max="32767" attributes="0"/>
                   </Group>
+<<<<<<< HEAD
                   <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="eMailField" alignment="0" max="32767" attributes="0"/>
@@ -167,6 +168,77 @@
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
+=======
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="eMailField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="reinEmailField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="nomeCompletoLabel" alignment="0" max="32767" attributes="0"/>
+                              <Component id="nomeCompletoField" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="novaContaLabel" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="166" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="diaNascimento" min="-2" pref="44" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="mesNascimento" min="-2" pref="86" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="anoNascimento" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="dataNascimentoLabel" min="-2" pref="143" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="feminino" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="masculino" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="generoLabel" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Component id="registar" alignment="1" max="32767" attributes="0"/>
+                              <Component id="eMailLabel" alignment="0" max="32767" attributes="0"/>
+                              <Component id="reinEmailLabel" alignment="0" max="32767" attributes="0"/>
+                              <Component id="passwordRegistoLabel" alignment="0" max="32767" attributes="0"/>
+                              <Component id="reinPasswordLabel" alignment="0" max="32767" attributes="0"/>
+                              <Component id="reinPasswordRegistoField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="passwordRegistoField" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="320" max="-2" attributes="0"/>
+                                  <Component id="sobreLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="contactosLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="17" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="usernameEmailLoginLabel" max="32767" attributes="0"/>
+                                      <Component id="usernameField" pref="154" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="passwordLoginLabel" max="32767" attributes="0"/>
+                                      <Component id="passwordField" min="-2" pref="154" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="iniciarSessao" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
+                          <Component id="avisoemailrepetido" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+>>>>>>> origin/joel
               </Group>
           </Group>
         </DimensionLayout>
@@ -231,6 +303,11 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="registar" min="-2" pref="36" max="-2" attributes="0"/>
+<<<<<<< HEAD
+=======
+                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                          <Component id="avisoemailrepetido" min="-2" max="-2" attributes="0"/>
+>>>>>>> origin/joel
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="sobreLabel" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -687,6 +764,11 @@
             <Property name="text" type="java.lang.String" value="tomas"/>
           </Properties>
         </Component>
+<<<<<<< HEAD
+=======
+        <Component class="javax.swing.JLabel" name="avisoemailrepetido">
+        </Component>
+>>>>>>> origin/joel
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="completarRegisto">
@@ -755,6 +837,10 @@
                               <Component id="telefoneField" pref="240" max="32767" attributes="0"/>
                               <Component id="usernameLabel" alignment="0" max="32767" attributes="0"/>
                               <Component id="usernameDefField" alignment="1" pref="240" max="32767" attributes="0"/>
+<<<<<<< HEAD
+=======
+                              <Component id="erroRegisto" max="32767" attributes="0"/>
+>>>>>>> origin/joel
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
@@ -796,7 +882,13 @@
                   <Component id="usernameLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="usernameDefField" min="-2" pref="36" max="-2" attributes="0"/>
+<<<<<<< HEAD
                   <EmptySpace pref="196" max="32767" attributes="0"/>
+=======
+                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                  <Component id="erroRegisto" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="130" max="32767" attributes="0"/>
+>>>>>>> origin/joel
               </Group>
           </Group>
         </DimensionLayout>
@@ -965,6 +1057,11 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="seguinteCompletarRegistoActionPerformed"/>
           </Events>
         </Component>
+<<<<<<< HEAD
+=======
+        <Component class="javax.swing.JLabel" name="erroRegisto">
+        </Component>
+>>>>>>> origin/joel
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="menuLeitor">
@@ -986,7 +1083,11 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
+<<<<<<< HEAD
                   <EmptySpace pref="882" max="32767" attributes="0"/>
+=======
+                  <EmptySpace pref="874" max="32767" attributes="0"/>
+>>>>>>> origin/joel
                   <Component id="terminarSessaoLeitor" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
