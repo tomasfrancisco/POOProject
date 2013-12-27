@@ -37,13 +37,11 @@ public class BibliotecaGUI extends javax.swing.JFrame {
         usernameEmailLoginLabel = new javax.swing.JLabel();
         passwordLoginLabel = new javax.swing.JLabel();
         autenticacaoLabel = new javax.swing.JLabel();
-        login = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        iniciarSessao = new javax.swing.JButton();
+        novaContaLabel = new javax.swing.JLabel();
         nomeCompletoField = new javax.swing.JTextField();
         eMailField = new javax.swing.JTextField();
         reinEmailField = new javax.swing.JTextField();
-        passwordFiel = new javax.swing.JTextField();
-        reinPasswordField = new javax.swing.JTextField();
         diaNascimento = new javax.swing.JComboBox();
         mesNascimento = new javax.swing.JComboBox();
         anoNascimento = new javax.swing.JComboBox();
@@ -55,80 +53,116 @@ public class BibliotecaGUI extends javax.swing.JFrame {
         passwordRegistoLabel = new javax.swing.JLabel();
         reinPasswordLabel = new javax.swing.JLabel();
         dataNascimentoLabel = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        sobreLabel = new javax.swing.JLabel();
+        contactosLabel = new javax.swing.JLabel();
         registar = new javax.swing.JButton();
-        primeiroLogin = new javax.swing.JPanel();
-        avisoPrimeiroLogin = new javax.swing.JLabel();
-        avisoExtraPrimeiroLogin = new javax.swing.JLabel();
+        mainImage = new javax.swing.JLabel();
+        generoLabel = new javax.swing.JLabel();
+        passwordRegistoField = new javax.swing.JPasswordField();
+        reinPasswordRegistoField = new javax.swing.JPasswordField();
+        completarRegisto = new javax.swing.JPanel();
         moradaField = new javax.swing.JTextField();
+        anteriorCompletarRegisto = new javax.swing.JButton();
+        completarRegistoLabel = new javax.swing.JLabel();
+        moradaLabel = new javax.swing.JLabel();
+        codigoPostalLabel = new javax.swing.JLabel();
+        codigoPostalField1 = new javax.swing.JTextField();
+        codigoPostalField2 = new javax.swing.JTextField();
+        hifenLabel = new javax.swing.JLabel();
+        localidadeLabel = new javax.swing.JLabel();
+        localidadeField = new javax.swing.JTextField();
+        telefoneLabel = new javax.swing.JLabel();
+        telefoneField = new javax.swing.JTextField();
+        usernameLabel = new javax.swing.JLabel();
+        usernameDefField = new javax.swing.JTextField();
+        seguinteCompletarRegisto = new javax.swing.JButton();
+        menuLeitor = new javax.swing.JPanel();
+        terminarSessaoLeitor = new javax.swing.JButton();
 
         masculinoFeminino.add(masculino);
         masculinoFeminino.add(feminino);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Biblioteca");
+        setBackground(new java.awt.Color(255, 255, 255));
+        setMinimumSize(new java.awt.Dimension(1024, 768));
+        setName("bibliotecaFrame"); // NOI18N
 
+        autenticacao.setBackground(new java.awt.Color(255, 255, 255));
         autenticacao.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         autenticacao.setToolTipText("");
-        autenticacao.setPreferredSize(new java.awt.Dimension(910, 760));
 
-        usernameField.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        usernameField.setFont(new java.awt.Font("Segoe UI Emoji", 0, 11)); // NOI18N
         usernameField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        usernameField.setText("mail@tomasfrancisco.com");
+        usernameField.setMinimumSize(new java.awt.Dimension(6, 20));
         usernameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usernameFieldActionPerformed(evt);
             }
         });
 
-        passwordField.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         passwordField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        passwordField.setText("tomas");
         passwordField.setToolTipText("password");
-
-        usernameEmailLoginLabel.setText("Username / E-mail");
-
-        passwordLoginLabel.setText("Password");
-
-        autenticacaoLabel.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        autenticacaoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        autenticacaoLabel.setText("Biblioteca");
-
-        login.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        login.setText("Login");
-        login.addActionListener(new java.awt.event.ActionListener() {
+        passwordField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginActionPerformed(evt);
+                passwordFieldActionPerformed(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel2.setText("Registo");
+        usernameEmailLoginLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 11)); // NOI18N
+        usernameEmailLoginLabel.setText("Username / E-mail");
 
+        passwordLoginLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 11)); // NOI18N
+        passwordLoginLabel.setText("Password");
+
+        autenticacaoLabel.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        autenticacaoLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        autenticacaoLabel.setText("Biblioteca");
+
+        iniciarSessao.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        iniciarSessao.setText("Iniciar Sessão");
+        iniciarSessao.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        iniciarSessao.setMaximumSize(new java.awt.Dimension(103, 24));
+        iniciarSessao.setMinimumSize(new java.awt.Dimension(103, 24));
+        iniciarSessao.setPreferredSize(new java.awt.Dimension(103, 24));
+        iniciarSessao.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        iniciarSessao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                iniciarSessaoActionPerformed(evt);
+            }
+        });
+
+        novaContaLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        novaContaLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        novaContaLabel.setText("Ainda não tem conta?");
+
+        nomeCompletoField.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        nomeCompletoField.setText("Tomás Luís Fonseca Francisco");
+        nomeCompletoField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeCompletoFieldActionPerformed(evt);
+            }
+        });
+
+        eMailField.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        eMailField.setText("mail@tomasfrancisco.com");
         eMailField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 eMailFieldActionPerformed(evt);
             }
         });
 
+        reinEmailField.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        reinEmailField.setText("mail@tomasfrancisco.com");
         reinEmailField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 reinEmailFieldActionPerformed(evt);
             }
         });
 
-        passwordFiel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordFielActionPerformed(evt);
-            }
-        });
-
-        reinPasswordField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                reinPasswordFieldActionPerformed(evt);
-            }
-        });
-
+        diaNascimento.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
         diaNascimento.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Dia", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
         diaNascimento.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
             public void mouseWheelMoved(java.awt.event.MouseWheelEvent evt) {
@@ -141,10 +175,14 @@ public class BibliotecaGUI extends javax.swing.JFrame {
             }
         });
 
-        mesNascimento.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mês", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
+        mesNascimento.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        mesNascimento.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mês", "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" }));
 
+        anoNascimento.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
         anoNascimento.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Ano", "1900", "1901", "1902", "1903", "1904", "1905", "1906", "1907", "1908", "1909", "1910", "1911", "1912", "1913", "1914", "1915", "1916", "1917", "1918", "1919", "1920", "1921", "1922", "1923", "1924", "1925", "1926", "1927", "1928", "1929", "1930", "1931", "1932", "1933", "1934", "1935", "1936", "1937", "1938", "1939", "1940", "1941", "1942", "1943", "1944", "1945", "1946", "1947", "1948", "1949", "1950", "1951", "1952", "1953", "1954", "1955", "1956", "1957", "1958", "1959", "1960", "1961", "1962", "1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013" }));
 
+        masculino.setBackground(new java.awt.Color(255, 255, 255));
+        masculino.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
         masculino.setText("Masculino");
         masculino.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,33 +190,56 @@ public class BibliotecaGUI extends javax.swing.JFrame {
             }
         });
 
+        feminino.setBackground(new java.awt.Color(255, 255, 255));
+        feminino.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
         feminino.setText("Feminino");
 
+        nomeCompletoLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 11)); // NOI18N
         nomeCompletoLabel.setText("Nome Completo");
 
+        eMailLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 11)); // NOI18N
         eMailLabel.setText("E-mail");
 
+        reinEmailLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 11)); // NOI18N
         reinEmailLabel.setText("Reintroduza o E-mail");
 
+        passwordRegistoLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 11)); // NOI18N
         passwordRegistoLabel.setText("Password");
 
+        reinPasswordLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 11)); // NOI18N
         reinPasswordLabel.setText("Reintroduza a Password");
 
+        dataNascimentoLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 11)); // NOI18N
         dataNascimentoLabel.setText("Data de Nascimento");
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/biblioteca/images/Biblioteca.jpg"))); // NOI18N
+        sobreLabel.setText("Sobre");
 
-        jLabel1.setText("Sobre");
+        contactosLabel.setText("Contactos");
 
-        jLabel4.setText("Contactos");
-
-        registar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        registar.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
         registar.setText("Registar");
+        registar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         registar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 registarActionPerformed(evt);
             }
         });
+
+        mainImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/biblioteca/images/AuthImage.png"))); // NOI18N
+
+        generoLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 11)); // NOI18N
+        generoLabel.setText("Género");
+
+        passwordRegistoField.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        passwordRegistoField.setText("tomas");
+        passwordRegistoField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passwordRegistoFieldActionPerformed(evt);
+            }
+        });
+
+        reinPasswordRegistoField.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        reinPasswordRegistoField.setText("tomas");
 
         javax.swing.GroupLayout autenticacaoLayout = new javax.swing.GroupLayout(autenticacao);
         autenticacao.setLayout(autenticacaoLayout);
@@ -187,82 +248,80 @@ public class BibliotecaGUI extends javax.swing.JFrame {
             .addGroup(autenticacaoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(mainImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(autenticacaoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addGap(56, 56, 56)
                 .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, autenticacaoLayout.createSequentialGroup()
+                    .addComponent(eMailField)
+                    .addComponent(reinEmailField)
+                    .addComponent(nomeCompletoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(nomeCompletoField)
+                    .addGroup(autenticacaoLayout.createSequentialGroup()
+                        .addComponent(novaContaLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(166, 166, 166))
+                    .addGroup(autenticacaoLayout.createSequentialGroup()
                         .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(dataNascimentoLabel)
-                            .addComponent(reinPasswordLabel)
-                            .addComponent(reinEmailLabel)
-                            .addComponent(nomeCompletoLabel)
-                            .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(nomeCompletoField, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(reinEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(eMailLabel)
-                                    .addComponent(eMailField, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(passwordRegistoLabel)
-                                    .addComponent(passwordFiel, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(autenticacaoLayout.createSequentialGroup()
-                                .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(usernameEmailLoginLabel)
-                                    .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(diaNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(passwordLoginLabel)
-                                    .addGroup(autenticacaoLayout.createSequentialGroup()
-                                        .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(login))))
-                            .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(registar, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, autenticacaoLayout.createSequentialGroup()
-                                        .addComponent(diaNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(mesNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(anoNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(feminino)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(masculino))
-                                    .addComponent(reinPasswordField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, autenticacaoLayout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(189, 189, 189))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, autenticacaoLayout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel4)
-                        .addGap(18, 18, 18))))
+                                .addComponent(mesNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(anoNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(dataNascimentoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(autenticacaoLayout.createSequentialGroup()
+                                .addComponent(feminino)
+                                .addGap(10, 10, 10)
+                                .addComponent(masculino))
+                            .addComponent(generoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(registar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(eMailLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(reinEmailLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(passwordRegistoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(reinPasswordLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(reinPasswordRegistoField)
+                    .addComponent(passwordRegistoField)
+                    .addGroup(autenticacaoLayout.createSequentialGroup()
+                        .addGap(320, 320, 320)
+                        .addComponent(sobreLabel)
+                        .addGap(18, 18, 18)
+                        .addComponent(contactosLabel)
+                        .addGap(0, 17, Short.MAX_VALUE))
+                    .addGroup(autenticacaoLayout.createSequentialGroup()
+                        .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(usernameEmailLoginLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(usernameField, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(passwordLoginLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(iniciarSessao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         autenticacaoLayout.setVerticalGroup(
             autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(autenticacaoLayout.createSequentialGroup()
-                .addGap(13, 13, 13)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(autenticacaoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(autenticacaoLayout.createSequentialGroup()
-                            .addComponent(passwordLoginLabel)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(autenticacaoLayout.createSequentialGroup()
+                    .addComponent(autenticacaoLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, autenticacaoLayout.createSequentialGroup()
+                        .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(usernameEmailLoginLabel)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(passwordLoginLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(iniciarSessao, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(autenticacaoLayout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
+                        .addGap(35, 35, 35)
+                        .addComponent(novaContaLabel)
+                        .addGap(44, 44, 44)
                         .addComponent(nomeCompletoLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(nomeCompletoField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -272,18 +331,20 @@ public class BibliotecaGUI extends javax.swing.JFrame {
                         .addComponent(eMailField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(reinEmailLabel)
-                        .addGap(4, 4, 4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(reinEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(passwordRegistoLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(passwordFiel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(passwordRegistoField, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(reinPasswordLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(reinPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(reinPasswordRegistoField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(dataNascimentoLabel)
+                        .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(dataNascimentoLabel)
+                            .addComponent(generoLabel))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(diaNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -292,58 +353,247 @@ public class BibliotecaGUI extends javax.swing.JFrame {
                             .addComponent(feminino)
                             .addComponent(masculino))
                         .addGap(18, 18, 18)
-                        .addComponent(registar)
-                        .addGap(163, 163, 163)
+                        .addComponent(registar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel4)))
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 674, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(sobreLabel)
+                            .addComponent(contactosLabel)))
+                    .addComponent(mainImage, javax.swing.GroupLayout.PREFERRED_SIZE, 658, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
-        primeiroLogin.setPreferredSize(new java.awt.Dimension(910, 760));
+        completarRegisto.setBackground(new java.awt.Color(255, 255, 255));
+        completarRegisto.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        completarRegisto.setEnabled(false);
+        completarRegisto.setPreferredSize(new java.awt.Dimension(1061, 749));
 
-        avisoPrimeiroLogin.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        avisoPrimeiroLogin.setText("Antes de continuar complete os seguintes campos...");
+        moradaField.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        moradaField.setText("Bairro da Reboleirada, Nº6");
+        moradaField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                moradaFieldActionPerformed(evt);
+            }
+        });
 
-        avisoExtraPrimeiroLogin.setText("Estes dados são obrigatórios para que possa efectuar qualquer requisição");
+        anteriorCompletarRegisto.setBackground(new java.awt.Color(255, 255, 255));
+        anteriorCompletarRegisto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/biblioteca/images/left_round-32.png"))); // NOI18N
+        anteriorCompletarRegisto.setToolTipText("");
+        anteriorCompletarRegisto.setBorder(null);
+        anteriorCompletarRegisto.setBorderPainted(false);
+        anteriorCompletarRegisto.setContentAreaFilled(false);
+        anteriorCompletarRegisto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                anteriorCompletarRegistoActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout primeiroLoginLayout = new javax.swing.GroupLayout(primeiroLogin);
-        primeiroLogin.setLayout(primeiroLoginLayout);
-        primeiroLoginLayout.setHorizontalGroup(
-            primeiroLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(primeiroLoginLayout.createSequentialGroup()
+        completarRegistoLabel.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        completarRegistoLabel.setText("Complete o seu registo");
+
+        moradaLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 11)); // NOI18N
+        moradaLabel.setText("Morada, Nº Porta");
+
+        codigoPostalLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 11)); // NOI18N
+        codigoPostalLabel.setText("Código postal");
+
+        codigoPostalField1.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        codigoPostalField1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        codigoPostalField1.setText("6215");
+        codigoPostalField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                codigoPostalField1ActionPerformed(evt);
+            }
+        });
+
+        codigoPostalField2.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        codigoPostalField2.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        codigoPostalField2.setText("318");
+        codigoPostalField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                codigoPostalField2ActionPerformed(evt);
+            }
+        });
+
+        hifenLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        hifenLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        hifenLabel.setText("-");
+
+        localidadeLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 11)); // NOI18N
+        localidadeLabel.setText("Localidade");
+
+        localidadeField.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        localidadeField.setText("Paul, Covilhã");
+        localidadeField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                localidadeFieldActionPerformed(evt);
+            }
+        });
+
+        telefoneLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 11)); // NOI18N
+        telefoneLabel.setText("Telefone");
+
+        telefoneField.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        telefoneField.setText("968158474");
+        telefoneField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                telefoneFieldActionPerformed(evt);
+            }
+        });
+
+        usernameLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 11)); // NOI18N
+        usernameLabel.setText("Defina um username para iniciar sessão");
+
+        usernameDefField.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        usernameDefField.setText("tfrancisco");
+        usernameDefField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usernameDefFieldActionPerformed(evt);
+            }
+        });
+
+        seguinteCompletarRegisto.setBackground(new java.awt.Color(255, 255, 255));
+        seguinteCompletarRegisto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/biblioteca/images/right_round-32.png"))); // NOI18N
+        seguinteCompletarRegisto.setToolTipText("");
+        seguinteCompletarRegisto.setBorder(null);
+        seguinteCompletarRegisto.setBorderPainted(false);
+        seguinteCompletarRegisto.setContentAreaFilled(false);
+        seguinteCompletarRegisto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seguinteCompletarRegistoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout completarRegistoLayout = new javax.swing.GroupLayout(completarRegisto);
+        completarRegisto.setLayout(completarRegistoLayout);
+        completarRegistoLayout.setHorizontalGroup(
+            completarRegistoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(completarRegistoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(primeiroLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(avisoPrimeiroLogin)
-                    .addComponent(avisoExtraPrimeiroLogin)
-                    .addComponent(moradaField, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(347, Short.MAX_VALUE))
-        );
-        primeiroLoginLayout.setVerticalGroup(
-            primeiroLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(primeiroLoginLayout.createSequentialGroup()
+                .addComponent(anteriorCompletarRegisto, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(seguinteCompletarRegisto, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(completarRegistoLayout.createSequentialGroup()
                 .addGap(51, 51, 51)
-                .addComponent(avisoPrimeiroLogin)
+                .addGroup(completarRegistoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(completarRegistoLayout.createSequentialGroup()
+                        .addComponent(completarRegistoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(completarRegistoLayout.createSequentialGroup()
+                        .addGroup(completarRegistoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(completarRegistoLayout.createSequentialGroup()
+                                .addComponent(codigoPostalField1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(hifenLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(codigoPostalField2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(localidadeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, completarRegistoLayout.createSequentialGroup()
+                        .addGroup(completarRegistoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(moradaLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(moradaField)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, completarRegistoLayout.createSequentialGroup()
+                                .addGroup(completarRegistoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(codigoPostalLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(localidadeField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 188, Short.MAX_VALUE)))
+                        .addGap(578, 578, 578))
+                    .addGroup(completarRegistoLayout.createSequentialGroup()
+                        .addGroup(completarRegistoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(telefoneLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(telefoneField, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
+                            .addComponent(usernameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(usernameDefField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+        );
+        completarRegistoLayout.setVerticalGroup(
+            completarRegistoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(completarRegistoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(completarRegistoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(anteriorCompletarRegisto, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(seguinteCompletarRegisto, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addComponent(completarRegistoLabel)
+                .addGap(75, 75, 75)
+                .addComponent(moradaLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(avisoExtraPrimeiroLogin)
-                .addGap(67, 67, 67)
                 .addComponent(moradaField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(557, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(codigoPostalLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(completarRegistoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(codigoPostalField1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(codigoPostalField2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(hifenLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(localidadeLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(localidadeField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(telefoneLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(telefoneField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57)
+                .addComponent(usernameLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(usernameDefField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(196, Short.MAX_VALUE))
+        );
+
+        menuLeitor.setBackground(new java.awt.Color(255, 255, 255));
+        menuLeitor.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        menuLeitor.setPreferredSize(new java.awt.Dimension(1061, 749));
+
+        terminarSessaoLeitor.setBackground(new java.awt.Color(255, 255, 255));
+        terminarSessaoLeitor.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        terminarSessaoLeitor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/biblioteca/images/logout-32.png"))); // NOI18N
+        terminarSessaoLeitor.setText("Terminar Sessão");
+        terminarSessaoLeitor.setToolTipText("");
+        terminarSessaoLeitor.setBorder(null);
+        terminarSessaoLeitor.setBorderPainted(false);
+        terminarSessaoLeitor.setContentAreaFilled(false);
+        terminarSessaoLeitor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                terminarSessaoLeitorActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout menuLeitorLayout = new javax.swing.GroupLayout(menuLeitor);
+        menuLeitor.setLayout(menuLeitorLayout);
+        menuLeitorLayout.setHorizontalGroup(
+            menuLeitorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menuLeitorLayout.createSequentialGroup()
+                .addContainerGap(882, Short.MAX_VALUE)
+                .addComponent(terminarSessaoLeitor)
+                .addContainerGap())
+        );
+        menuLeitorLayout.setVerticalGroup(
+            menuLeitorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menuLeitorLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(terminarSessaoLeitor, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(690, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(autenticacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(completarRegisto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(primeiroLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(menuLeitor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
@@ -354,8 +604,13 @@ public class BibliotecaGUI extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(completarRegisto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(primeiroLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(menuLeitor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
@@ -370,14 +625,6 @@ public class BibliotecaGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_diaNascimentoActionPerformed
 
-    private void reinPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reinPasswordFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_reinPasswordFieldActionPerformed
-
-    private void passwordFielActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFielActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordFielActionPerformed
-
     private void reinEmailFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reinEmailFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_reinEmailFieldActionPerformed
@@ -386,23 +633,28 @@ public class BibliotecaGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_eMailFieldActionPerformed
 
-    private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
-        String usernameString, passwordString;
+    private void iniciarSessaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarSessaoActionPerformed
 
-        usernameString = this.usernameField.getText();
-        passwordString = this.passwordField.getText();
+        String usernameString = this.usernameField.getText();
+        String passwordString = new String(this.passwordField.getPassword());
 
-        ArrayList <Utilizador> users = Gestor.getUtilizadores();
-
-        if(Autenticacao.login(users, usernameString, passwordString))
+        if(Autenticacao.login(Gestor.getUtilizadores(), usernameString, passwordString))
         {
-            this.setContentPane(this.primeiroLogin);
+            
+            if(Gestor.getUtilizador(usernameString).getUsername().equals("NULL"))
+            {
+                this.setContentPane(this.completarRegisto);
+            }
+            else
+            {
+                this.setContentPane(this.menuLeitor);
+            }
         }
         else
         {
-            
+            //TODO
         }
-    }//GEN-LAST:event_loginActionPerformed
+    }//GEN-LAST:event_iniciarSessaoActionPerformed
 
     private void usernameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameFieldActionPerformed
         // TODO add your handling code here:
@@ -419,7 +671,7 @@ public class BibliotecaGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         String nomeCompleto = this.nomeCompletoField.getText();
         String eMail = this.eMailField.getText();
-        String password = this.passwordFiel.getText();
+        String password = new String(this.passwordRegistoField.getPassword());
         String dataNascimento = this.diaNascimento.getSelectedItem().toString() + "/" + this.mesNascimento.getSelectedItem().toString() + "/" + this.anoNascimento.getSelectedItem().toString();
         String genero;
         if(this.feminino.isSelected())
@@ -435,18 +687,85 @@ public class BibliotecaGUI extends javax.swing.JFrame {
             genero = "ERRO";
         }
 
-        Utilizador novoUtilizador = new Leitor(nomeCompleto, genero, "Não definida", "Não definido", eMail, dataNascimento, "Não definido", password, ALUNO);
+        Utilizador novoUtilizador = new Leitor(nomeCompleto, genero, "NULL", "NULL", "NULL", "NULL", eMail, dataNascimento, "NULL", password, ALUNO);
         Gestor.setUtilizador(novoUtilizador);
         
         System.out.println("Registo efectuado com sucesso!");        
     }//GEN-LAST:event_registarActionPerformed
+
+    private void anteriorCompletarRegistoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anteriorCompletarRegistoActionPerformed
+        // TODO add your handling code here:
+        this.setContentPane(this.autenticacao);
+    }//GEN-LAST:event_anteriorCompletarRegistoActionPerformed
+
+    private void moradaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moradaFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_moradaFieldActionPerformed
+
+    private void nomeCompletoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeCompletoFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeCompletoFieldActionPerformed
+
+    private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordFieldActionPerformed
+
+    private void passwordRegistoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordRegistoFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordRegistoFieldActionPerformed
+
+    private void codigoPostalField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codigoPostalField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_codigoPostalField1ActionPerformed
+
+    private void codigoPostalField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codigoPostalField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_codigoPostalField2ActionPerformed
+
+    private void localidadeFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_localidadeFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_localidadeFieldActionPerformed
+
+    private void telefoneFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefoneFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_telefoneFieldActionPerformed
+
+    private void usernameDefFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameDefFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usernameDefFieldActionPerformed
+
+    private void seguinteCompletarRegistoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seguinteCompletarRegistoActionPerformed
+        // TODO add your handling code here:
+        String eMail = this.usernameField.getText();
+        String morada = this.moradaField.getText();
+        String codigo_postal = this.codigoPostalField1.getText() + "-" + this.codigoPostalField2.getText();
+        String localidade = this.localidadeField.getText();
+        String telefone = this.telefoneField.getText();
+        String usernameDef = this.usernameDefField.getText();
+        
+        Utilizador user = Gestor.getUtilizador(eMail);
+        user.setMorada(morada);
+        user.setCodigo_postal(codigo_postal);
+        user.setLocalidade(localidade);
+        user.setTelefone(telefone);
+        user.setUsername(usernameDef);
+        
+        this.setContentPane(this.menuLeitor);
+    }//GEN-LAST:event_seguinteCompletarRegistoActionPerformed
+
+    private void terminarSessaoLeitorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terminarSessaoLeitorActionPerformed
+        // TODO add your handling code here:
+        this.usernameField.setText("");
+        this.passwordField.setText("");
+        this.setContentPane(this.autenticacao);
+    }//GEN-LAST:event_terminarSessaoLeitorActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
         // Administrador
-        Gestor.setUtilizador(new Administrador("admin", "Não definido", "Não definida", "Não definido", "admin@admin.com", "Não definida", "admin", "admin", ADMIN));
+        Gestor.setUtilizador(new Administrador("admin", "NULL", "NULL", "NULL", "NULL", "NULL", "admin@admin.com", "NULL", "admin", "admin", ADMIN));
         // Fim do Administrador
         
         
@@ -480,37 +799,52 @@ public class BibliotecaGUI extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox anoNascimento;
+    private javax.swing.JButton anteriorCompletarRegisto;
     private javax.swing.JPanel autenticacao;
     private javax.swing.JLabel autenticacaoLabel;
-    private javax.swing.JLabel avisoExtraPrimeiroLogin;
-    private javax.swing.JLabel avisoPrimeiroLogin;
+    private javax.swing.JTextField codigoPostalField1;
+    private javax.swing.JTextField codigoPostalField2;
+    private javax.swing.JLabel codigoPostalLabel;
+    private javax.swing.JPanel completarRegisto;
+    private javax.swing.JLabel completarRegistoLabel;
+    private javax.swing.JLabel contactosLabel;
     private javax.swing.JLabel dataNascimentoLabel;
     private javax.swing.JComboBox diaNascimento;
     private javax.swing.JTextField eMailField;
     private javax.swing.JLabel eMailLabel;
     private javax.swing.JRadioButton feminino;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JButton login;
+    private javax.swing.JLabel generoLabel;
+    private javax.swing.JLabel hifenLabel;
+    private javax.swing.JButton iniciarSessao;
+    private javax.swing.JTextField localidadeField;
+    private javax.swing.JLabel localidadeLabel;
+    private javax.swing.JLabel mainImage;
     private javax.swing.JRadioButton masculino;
     private javax.swing.ButtonGroup masculinoFeminino;
+    private javax.swing.JPanel menuLeitor;
     private javax.swing.JComboBox mesNascimento;
     private javax.swing.JTextField moradaField;
+    private javax.swing.JLabel moradaLabel;
     private javax.swing.JTextField nomeCompletoField;
     private javax.swing.JLabel nomeCompletoLabel;
-    private javax.swing.JTextField passwordFiel;
+    private javax.swing.JLabel novaContaLabel;
     private javax.swing.JPasswordField passwordField;
     private javax.swing.JLabel passwordLoginLabel;
+    private javax.swing.JPasswordField passwordRegistoField;
     private javax.swing.JLabel passwordRegistoLabel;
-    private javax.swing.JPanel primeiroLogin;
     private javax.swing.JButton registar;
     private javax.swing.JTextField reinEmailField;
     private javax.swing.JLabel reinEmailLabel;
-    private javax.swing.JTextField reinPasswordField;
     private javax.swing.JLabel reinPasswordLabel;
+    private javax.swing.JPasswordField reinPasswordRegistoField;
+    private javax.swing.JButton seguinteCompletarRegisto;
+    private javax.swing.JLabel sobreLabel;
+    private javax.swing.JTextField telefoneField;
+    private javax.swing.JLabel telefoneLabel;
+    private javax.swing.JButton terminarSessaoLeitor;
+    private javax.swing.JTextField usernameDefField;
     private javax.swing.JLabel usernameEmailLoginLabel;
     private javax.swing.JTextField usernameField;
+    private javax.swing.JLabel usernameLabel;
     // End of variables declaration//GEN-END:variables
 }

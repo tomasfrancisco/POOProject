@@ -82,12 +82,35 @@ abstract class Gestor {
         }
         
         /**
+         * Retorna o utilizador registado com o endereço de email ou username passado por parametro
+         * @param ocorre
+         * @return 
+         */
+        public static Utilizador getUtilizador(String ocorre)
+        {
+            Utilizador utilizador;
+            
+            for(int i = 0; i < utilizadores.size(); i++)
+            {
+                if((utilizador = utilizadores.get(i)).getEmail().equals(ocorre))
+                {
+                    return utilizador;
+                }
+                else if((utilizador = utilizadores.get(i)).getUsername().equals(ocorre))
+                {
+                    return utilizador;
+                }
+            }
+            return null;
+        }
+        
+        /**
          * Retorna uma lista de objectos de Utilizador onde há ocorrencias de ocorre
          * Permite a procura por nome ou por telefone de utilizador
          * @param ocorre
          * @return 
          */
-        public static ArrayList <Utilizador> getUtilizador(String ocorre)
+        public static ArrayList <Utilizador> getUtilizadorNomeTelefone(String ocorre)
         {
             ArrayList <Utilizador> ocorrencias = new ArrayList();
             Utilizador utilizador;
