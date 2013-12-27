@@ -6,14 +6,9 @@ class Livro extends Item{
     private String isbn;
     private ArrayList <Autor> autores=new ArrayList();
     private String cota;
-<<<<<<< HEAD
-    Livro(int numero,String titulo, int ano, String editora, int isbn, String cota)
-=======
     
     Livro(String titulo, int ano, String editora, String isbn, String cota, int numero)
->>>>>>> origin/master
     {
-        super.numero=numero;
         super.editora=editora;
         super.titulo=titulo;
         super.ano=ano;

@@ -3,8 +3,11 @@ package biblioteca;
 abstract class Utilizador {
     
 	protected String nome;
-	protected int numero;
+        protected String genero;
+	protected double numero;
 	protected String morada;
+        protected String codigo_postal;
+        protected String localidade;
 	protected String telefone;
 	protected String email;
 	protected String data_nascimento;
@@ -29,8 +32,18 @@ abstract class Utilizador {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+        
+        public String getGenero()
+        {
+            return this.genero;
+        }
+        
+        public void setGenero(String genero)
+        {
+            this.genero = genero;
+        }
 
-	public int getNumero() {
+	public double getNumero() {
 		return this.numero;
 	}
 
@@ -38,7 +51,7 @@ abstract class Utilizador {
 	 * 
 	 * @param numero
 	 */
-	public void setNumero(int numero) {
+	public void setNumero(double numero) {
 		this.numero = numero;
 	}
 
@@ -52,6 +65,32 @@ abstract class Utilizador {
 	 */
 	public void setMorada(String morada) {
 		this.morada = morada;
+	}
+        
+        public String getCodigo_postal()
+        {
+            return this.codigo_postal;
+        }
+        
+        /**
+	 * 
+	 * @param codigo_postal
+	 */
+	public void setCodigo_postal(String codigo_postal) {
+		this.codigo_postal = codigo_postal;
+	}
+        
+        public String getLocalidade()
+        {
+            return this.localidade;
+        }
+        
+        /**
+	 * 
+	 * @param localidade
+	 */
+	public void setLocalidade(String localidade) {
+		this.localidade = localidade;
 	}
 
 	public String getTelefone() {
