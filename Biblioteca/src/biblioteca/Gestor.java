@@ -414,5 +414,42 @@ abstract class Gestor {
                 }
             }
             System.out.println("Numero médio de Requisicoes por dia :"+somarequisicoes/30+"\nDia em que houve mais requisicoes: "+diamax+"; Com "+reqdiamax+" requisicoes");
-        }       
+        }
+        /**
+         * Este Metodo tem como funcao a verificacao se 
+         * @param user
+         * @param telefone
+         * @return 
+         */
+        public static boolean verificaUser(String user)
+        {   
+            for(int i=0;i<Gestor.getUtilizadores().size();i++)        
+            {   
+                if(Gestor.getUtilizadores().get(i).getUsername().equals(user))
+                {
+                     return false;
+                }
+            }
+            return true;
+        }
+         public static boolean verificaTelefone(String telefone)
+         {
+            for(int i=0;i<Gestor.getUtilizadores().size();i++)        
+            {
+                if(Gestor.getUtilizadores().get(i).getTelefone().equals(telefone))
+                {
+                    return false;
+                }
+            }
+            return true;         
+         }
+         public static boolean verificaEmail(String email)
+        {
+            for(int i=0;i<Gestor.getUtilizadores().size();i++)        
+            {
+                if(Gestor.getUtilizadores().get(i).getEmail().equals(email))
+                    return false;
+            }
+            return true;
+        } 
 }
