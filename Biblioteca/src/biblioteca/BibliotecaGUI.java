@@ -60,6 +60,7 @@ public class BibliotecaGUI extends javax.swing.JFrame {
         generoLabel = new javax.swing.JLabel();
         passwordRegistoField = new javax.swing.JPasswordField();
         reinPasswordRegistoField = new javax.swing.JPasswordField();
+        avisoemailrepetido = new javax.swing.JLabel();
         completarRegisto = new javax.swing.JPanel();
         moradaField = new javax.swing.JTextField();
         anteriorCompletarRegisto = new javax.swing.JButton();
@@ -76,6 +77,7 @@ public class BibliotecaGUI extends javax.swing.JFrame {
         usernameLabel = new javax.swing.JLabel();
         usernameDefField = new javax.swing.JTextField();
         seguinteCompletarRegisto = new javax.swing.JButton();
+        erroRegisto = new javax.swing.JLabel();
         menuLeitor = new javax.swing.JPanel();
         terminarSessaoLeitor = new javax.swing.JButton();
 
@@ -250,55 +252,61 @@ public class BibliotecaGUI extends javax.swing.JFrame {
                 .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(mainImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(autenticacaoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(56, 56, 56)
                 .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(eMailField)
-                    .addComponent(reinEmailField)
-                    .addComponent(nomeCompletoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(nomeCompletoField)
                     .addGroup(autenticacaoLayout.createSequentialGroup()
-                        .addComponent(novaContaLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(166, 166, 166))
-                    .addGroup(autenticacaoLayout.createSequentialGroup()
+                        .addGap(56, 56, 56)
                         .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(eMailField)
+                            .addComponent(reinEmailField)
+                            .addComponent(nomeCompletoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(nomeCompletoField)
                             .addGroup(autenticacaoLayout.createSequentialGroup()
-                                .addComponent(diaNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(mesNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(anoNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(dataNascimentoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(novaContaLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(166, 166, 166))
                             .addGroup(autenticacaoLayout.createSequentialGroup()
-                                .addComponent(feminino)
-                                .addGap(10, 10, 10)
-                                .addComponent(masculino))
-                            .addComponent(generoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(registar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(eMailLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(reinEmailLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(passwordRegistoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(reinPasswordLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(reinPasswordRegistoField)
-                    .addComponent(passwordRegistoField)
+                                .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(autenticacaoLayout.createSequentialGroup()
+                                        .addComponent(diaNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(mesNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(anoNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(dataNascimentoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(autenticacaoLayout.createSequentialGroup()
+                                        .addComponent(feminino)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(masculino))
+                                    .addComponent(generoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(registar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(eMailLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(reinEmailLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(passwordRegistoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(reinPasswordLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(reinPasswordRegistoField)
+                            .addComponent(passwordRegistoField)
+                            .addGroup(autenticacaoLayout.createSequentialGroup()
+                                .addGap(320, 320, 320)
+                                .addComponent(sobreLabel)
+                                .addGap(18, 18, 18)
+                                .addComponent(contactosLabel)
+                                .addGap(0, 17, Short.MAX_VALUE))
+                            .addGroup(autenticacaoLayout.createSequentialGroup()
+                                .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(usernameEmailLoginLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(usernameField, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(passwordLoginLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(iniciarSessao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap())
                     .addGroup(autenticacaoLayout.createSequentialGroup()
-                        .addGap(320, 320, 320)
-                        .addComponent(sobreLabel)
-                        .addGap(18, 18, 18)
-                        .addComponent(contactosLabel)
-                        .addGap(0, 17, Short.MAX_VALUE))
-                    .addGroup(autenticacaoLayout.createSequentialGroup()
-                        .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(usernameEmailLoginLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(usernameField, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(passwordLoginLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(iniciarSessao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                        .addGap(116, 116, 116)
+                        .addComponent(avisoemailrepetido)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         autenticacaoLayout.setVerticalGroup(
             autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -354,6 +362,8 @@ public class BibliotecaGUI extends javax.swing.JFrame {
                             .addComponent(masculino))
                         .addGap(18, 18, 18)
                         .addComponent(registar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(46, 46, 46)
+                        .addComponent(avisoemailrepetido)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(autenticacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(sobreLabel)
@@ -504,7 +514,8 @@ public class BibliotecaGUI extends javax.swing.JFrame {
                             .addComponent(telefoneLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(telefoneField, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
                             .addComponent(usernameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(usernameDefField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE))
+                            .addComponent(usernameDefField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
+                            .addComponent(erroRegisto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         completarRegistoLayout.setVerticalGroup(
@@ -539,7 +550,9 @@ public class BibliotecaGUI extends javax.swing.JFrame {
                 .addComponent(usernameLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(usernameDefField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(196, Short.MAX_VALUE))
+                .addGap(51, 51, 51)
+                .addComponent(erroRegisto)
+                .addContainerGap(130, Short.MAX_VALUE))
         );
 
         menuLeitor.setBackground(new java.awt.Color(255, 255, 255));
@@ -565,7 +578,7 @@ public class BibliotecaGUI extends javax.swing.JFrame {
         menuLeitorLayout.setHorizontalGroup(
             menuLeitorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(menuLeitorLayout.createSequentialGroup()
-                .addContainerGap(882, Short.MAX_VALUE)
+                .addContainerGap(874, Short.MAX_VALUE)
                 .addComponent(terminarSessaoLeitor)
                 .addContainerGap())
         );
@@ -649,6 +662,7 @@ public class BibliotecaGUI extends javax.swing.JFrame {
             {
                 this.setContentPane(this.menuLeitor);
             }
+            avisoemailrepetido.setText("");
         }
         else
         {
@@ -686,13 +700,25 @@ public class BibliotecaGUI extends javax.swing.JFrame {
         {
             genero = "ERRO";
         }
-
-        Utilizador novoUtilizador = new Leitor(nomeCompleto, genero, "NULL", "NULL", "NULL", "NULL", eMail, dataNascimento, "NULL", password, ALUNO);
-        Gestor.setUtilizador(novoUtilizador);
-        
-        System.out.println("Registo efectuado com sucesso!");        
+        if(biblioteca.Gestor.verificaEmail(eMail)==false)
+        {
+            avisoemailrepetido.setText("O Email Inserido já se Encontra Resgitado!");
+            System.out.println("Registo não foi efectuado com sucesso!");
+        }
+        else
+        {
+            Utilizador novoUtilizador = new Leitor(nomeCompleto, genero, "NULL", "NULL", "NULL", "NULL", eMail, dataNascimento, "NULL", password, ALUNO);
+            Gestor.setUtilizador(novoUtilizador);
+            avisoemailrepetido.setText("Registo efectuado com sucesso!");        
+            System.out.println("Registo efectuado com sucesso!");        
+        }
     }//GEN-LAST:event_registarActionPerformed
-
+    /**
+     * Esta metodo tem como funcao a verificacao da existencia do email nos utilizadores ja existentes
+     * @param email
+     * @return 
+     */
+       
     private void anteriorCompletarRegistoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anteriorCompletarRegistoActionPerformed
         // TODO add your handling code here:
         this.setContentPane(this.autenticacao);
@@ -742,17 +768,26 @@ public class BibliotecaGUI extends javax.swing.JFrame {
         String localidade = this.localidadeField.getText();
         String telefone = this.telefoneField.getText();
         String usernameDef = this.usernameDefField.getText();
-        
-        Utilizador user = Gestor.getUtilizador(eMail);
-        user.setMorada(morada);
-        user.setCodigo_postal(codigo_postal);
-        user.setLocalidade(localidade);
-        user.setTelefone(telefone);
-        user.setUsername(usernameDef);
-        
-        this.setContentPane(this.menuLeitor);
+        if(biblioteca.Gestor.verificaUser(usernameDef)==true)
+        {
+            if(biblioteca.Gestor.verificaTelefone(telefone)==true)
+            {
+                Utilizador user = Gestor.getUtilizador(eMail);
+                user.setMorada(morada);
+                user.setCodigo_postal(codigo_postal);
+                user.setLocalidade(localidade);
+                user.setTelefone(telefone);
+                user.setUsername(usernameDef);            
+                this.setContentPane(this.menuLeitor);
+                erroRegisto.setText("");
+            }
+            else
+                erroRegisto.setText("O Telefone já se encontra ocupado");
+        }
+        else
+            erroRegisto.setText("O Nome de Utilizador já se encontra ocupado");
     }//GEN-LAST:event_seguinteCompletarRegistoActionPerformed
-
+     
     private void terminarSessaoLeitorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terminarSessaoLeitorActionPerformed
         // TODO add your handling code here:
         this.usernameField.setText("");
@@ -802,6 +837,7 @@ public class BibliotecaGUI extends javax.swing.JFrame {
     private javax.swing.JButton anteriorCompletarRegisto;
     private javax.swing.JPanel autenticacao;
     private javax.swing.JLabel autenticacaoLabel;
+    private javax.swing.JLabel avisoemailrepetido;
     private javax.swing.JTextField codigoPostalField1;
     private javax.swing.JTextField codigoPostalField2;
     private javax.swing.JLabel codigoPostalLabel;
@@ -812,6 +848,7 @@ public class BibliotecaGUI extends javax.swing.JFrame {
     private javax.swing.JComboBox diaNascimento;
     private javax.swing.JTextField eMailField;
     private javax.swing.JLabel eMailLabel;
+    private javax.swing.JLabel erroRegisto;
     private javax.swing.JRadioButton feminino;
     private javax.swing.JLabel generoLabel;
     private javax.swing.JLabel hifenLabel;

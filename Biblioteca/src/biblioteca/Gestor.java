@@ -9,10 +9,10 @@ abstract class Gestor {
         private static final int ADMIN = 3;
         private static final int ERRO = -1;
         
-	private static final ArrayList <Utilizador> utilizadores = new ArrayList();
-	private static final ArrayList <Item> itens = new ArrayList();
-	private static final ArrayList <Requisicao> requisicoes = new ArrayList();
-        
+        private static final ArrayList <Utilizador> utilizadores = new ArrayList();
+        private static final ArrayList <Item> itens = new ArrayList();
+        private static final ArrayList <Requisicao> requisicoes = new ArrayList();
+
         private static double numero_admin = 0;
         private static double numero_leitor = 0;
         private static double numero_requisicao = 0;
@@ -22,17 +22,18 @@ abstract class Gestor {
          * 
          * @return 
          */
-	public static ArrayList <Utilizador> getUtilizadores()
+        
+        public static ArrayList <Utilizador> getUtilizadores()
         {
-		return utilizadores;
-	}
+                return utilizadores;
+        }
 
-	/**
-	 * Adiciona um utilizador à colecção
+        /**
+         * Adiciona um utilizador à colecção
          * Retorna true caso seja adicionado com sucesso
-	 * @param utilizador
-	 */
-	public static boolean setUtilizador(Utilizador utilizador) 
+         * @param utilizador
+         */
+        public static boolean setUtilizador(Utilizador utilizador) 
         {
             if((utilizador.getTipo() == ALUNO) || (utilizador.getTipo() == PROF))
             {
@@ -48,7 +49,7 @@ abstract class Gestor {
                 return false;
                        
             return utilizadores.add(utilizador);
-	}
+        }
         
         /**
          * Remove o objecto utilizador da colecção
@@ -134,7 +135,7 @@ abstract class Gestor {
          * @param numero
          * @return 
          */
-	public static Requisicao getRequisicao(int numero)
+        public static Requisicao getRequisicao(int numero)
         {
             Requisicao requisicao;
                 
@@ -146,7 +147,7 @@ abstract class Gestor {
                 }
             }
             return null;
-	}
+        }
 
         /**
          * Retorna o Item Pelo seu número
@@ -231,17 +232,18 @@ abstract class Gestor {
             return ocorrencias;            
         }
 
-	/**
-	 * Adiciona uma requisição à colecção
+        /**
+         * Adiciona uma requisição à colecção
          * Retorna true caso seja adicionada com sucesso
-	 * @param requisicoes
-	 */
-	public static boolean setRequisicao(Requisicao requisicao)
+
+         * @param requisicoes
+         */
+        public static boolean setRequisicao(Requisicao requisicao)
         {
             requisicao.setNumero(numero_requisicao);
             numero_requisicao++;
             return requisicoes.add(requisicao);
-	}
+        }
         
         /**
          * Remove o objecto requisicao da colecção
@@ -301,7 +303,7 @@ abstract class Gestor {
          * @param ano
          * @return 
          */
-	public static ArrayList <Item> nRequesitados(int mes, int ano)
+        public static ArrayList <Item> nRequesitados(int mes, int ano)
         {
             ArrayList <Item> nre=new ArrayList ();
             for(int i = 0; i < itens.size(); i++)
@@ -414,5 +416,44 @@ abstract class Gestor {
                 }
             }
             System.out.println("Numero médio de Requisicoes por dia :"+somarequisicoes/30+"\nDia em que houve mais requisicoes: "+diamax+"; Com "+reqdiamax+" requisicoes");
-        }       
+        }
+        
+        /**
+         * Este Metodo tem como funcao a verificacao se 
+         * @param user
+         * @param telefone
+         * @return 
+         */
+        public static boolean verificaUser(String user)
+        {   
+            for(int i=0;i<Gestor.getUtilizadores().size();i++)        
+            {   
+                if(Gestor.getUtilizadores().get(i).getUsername().equals(user))
+                {
+                     return false;
+                }
+            }
+            return true;
+        }
+         public static boolean verificaTelefone(String telefone)
+         {
+            for(int i=0;i<Gestor.getUtilizadores().size();i++)        
+            {
+                if(Gestor.getUtilizadores().get(i).getTelefone().equals(telefone))
+                {
+                    return false;
+                }
+            }
+            return true;         
+         }
+         public static boolean verificaEmail(String email)
+        {
+            for(int i=0;i<Gestor.getUtilizadores().size();i++)        
+            {
+                if(Gestor.getUtilizadores().get(i).getEmail().equals(email))
+                    return false;
+            }
+            return true;
+        } 
 }
+
