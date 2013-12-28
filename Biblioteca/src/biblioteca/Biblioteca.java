@@ -180,11 +180,6 @@ public class Biblioteca extends javax.swing.JFrame {
         palavraPasseLabel.setText("Palavra-passe:");
 
         palavraPasseField.setText("admin");
-        palavraPasseField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                palavraPasseFieldActionPerformed(evt);
-            }
-        });
 
         avisosInicioSessaoLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
         avisosInicioSessaoLabel.setForeground(new java.awt.Color(255, 0, 0));
@@ -432,7 +427,7 @@ public class Biblioteca extends javax.swing.JFrame {
                 .addComponent(cabecalhoBibliotecaPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(menuBibliotecaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(imagemBibliotecaPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 472, Short.MAX_VALUE)
+                    .addComponent(imagemBibliotecaPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(novoRegistoBibliotecaPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -1228,7 +1223,7 @@ public class Biblioteca extends javax.swing.JFrame {
         bibliotecaGUI.setLayout(bibliotecaGUILayout);
         bibliotecaGUILayout.setHorizontalGroup(
             bibliotecaGUILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGap(0, 805, Short.MAX_VALUE)
             .addGroup(bibliotecaGUILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(bibliotecaGUILayout.createSequentialGroup()
                     .addComponent(menuBiblioteca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1311,6 +1306,10 @@ public class Biblioteca extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_codigoPostalField2ActionPerformed
 
+    private void palavraPasseRegistoFieldActionPerformed(java.awt.event.ActionEvent evt) {
+        
+    }
+    
     private void retornarMenuLeitorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retornarMenuLeitorButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_retornarMenuLeitorButtonActionPerformed
