@@ -94,13 +94,9 @@ abstract class Gestor {
             for(int i = 0; i < utilizadores.size(); i++)
             {
                 if((utilizador = utilizadores.get(i)).getEmail().equals(ocorre))
-                {
                     return utilizador;
-                }
                 else if((utilizador = utilizadores.get(i)).getUsername().equals(ocorre))
-                {
                     return utilizador;
-                }
             }
             return null;
         }
@@ -469,13 +465,45 @@ abstract class Gestor {
             return false;
         } 
         
+        /**
+         * Verifica se o campo de username já foi definito, true se não
+         * @param email
+         * @return 
+         */
         public static boolean verificaPrimeiraVez(String email)
         {
             for(int i=0;i<Gestor.getUtilizadores().size();i++)        
             {
-                if(Gestor.getUtilizadores().get(i).getUsername().equals("NULL"))
-                    return true;
+                if(Gestor.getUtilizadores().get(i).getEmail().equals(email))
+                {
+                    if(Gestor.getUtilizadores().get(i).getUsername().equals("NULL"))
+                        return true;
+                }
             }
+            return false;
+        }
+        
+        /**
+         * Retorna true se foi permitido
+         * @param utilizadores
+         * @param username
+         * @param password
+         * @return 
+         */
+        public static boolean login(String username, String password)
+        {
+            for(int i = 0; i < utilizadores.size(); i++)
+            {
+                if(utilizadores.get(i).getUsername().equals(username) || utilizadores.get(i).getEmail().equals(username))
+                {
+                    if(utilizadores.get(i).getPassword().equals(password))
+                    {
+                        System.out.println("Login efectuado com sucesso!");
+                        return true;
+                    }
+                }
+            }
+            System.out.println("Login falhado!");
             return false;
         }
 }
