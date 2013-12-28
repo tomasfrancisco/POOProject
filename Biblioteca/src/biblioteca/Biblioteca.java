@@ -21,6 +21,8 @@ public class Biblioteca extends javax.swing.JFrame {
         menuBiblioteca.setVisible(true);
         menuCompletarDados.setVisible(false);
         menuLeitor.setVisible(false);
+        menuEditarPerfil.setVisible(false);
+        menuRequisicao.setVisible(false);
     }
 
     /**
@@ -96,7 +98,49 @@ public class Biblioteca extends javax.swing.JFrame {
         retornarMenuLeitorButton = new javax.swing.JButton();
         avancarMenuLeitorButton = new javax.swing.JButton();
         terminarSessaoMenuLeitorButton = new javax.swing.JButton();
-        requisicao = new javax.swing.JPanel();
+        editarPerfilButton = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        menuRequisicao = new javax.swing.JPanel();
+        menuEditarPerfil = new javax.swing.JPanel();
+        cabecalhoMenuEditarPanel = new javax.swing.JPanel();
+        bemVindoLabel1 = new javax.swing.JLabel();
+        retornarMenuLeitorButton2 = new javax.swing.JButton();
+        avancarMenuLeitorButton1 = new javax.swing.JButton();
+        terminarSessaoMenuLeitorButton1 = new javax.swing.JButton();
+        retornarMenuLeitorButton3 = new javax.swing.JButton();
+        registoMenuEditarPanel = new javax.swing.JPanel();
+        editarNomeCompletoLabel = new javax.swing.JLabel();
+        editarNomeCompletoField = new javax.swing.JTextField();
+        editarEmailLabel = new javax.swing.JLabel();
+        editarEmailField = new javax.swing.JTextField();
+        editarReEmailLabel = new javax.swing.JLabel();
+        editarReEmailField = new javax.swing.JTextField();
+        editarPalavraPasseRegistoLabel = new javax.swing.JLabel();
+        editarRePalavraPasseRegistoLabel = new javax.swing.JLabel();
+        editarDataNascimentoLabel = new javax.swing.JLabel();
+        editarDiaComboBox = new javax.swing.JComboBox();
+        editarMesComboBox = new javax.swing.JComboBox();
+        editarAnoComboBox = new javax.swing.JComboBox();
+        editarGeneroLabel = new javax.swing.JLabel();
+        editarFemininoRadioButton = new javax.swing.JRadioButton();
+        editarMasculinoRadioButton = new javax.swing.JRadioButton();
+        editarPalavraPasseRegistoField = new javax.swing.JPasswordField();
+        editarRePalavraPasseRegistoField = new javax.swing.JPasswordField();
+        completarRegistoMenuEditarPanel = new javax.swing.JPanel();
+        editarMoradaLabel = new javax.swing.JLabel();
+        editarMoradaField = new javax.swing.JTextField();
+        editarCodigoPostalLabel = new javax.swing.JLabel();
+        editarCodigoPostalField1 = new javax.swing.JTextField();
+        editarTelefoneLabel = new javax.swing.JLabel();
+        editarCodigoPostalField2 = new javax.swing.JTextField();
+        editarLocalidadeField = new javax.swing.JTextField();
+        editarLocalidadeLabel = new javax.swing.JLabel();
+        editarTelefoneField = new javax.swing.JTextField();
+        editarDefinirUsernameLabel = new javax.swing.JLabel();
+        editarUsernameAvisoLabel = new javax.swing.JLabel();
+        editarDefinirUsernameField = new javax.swing.JTextField();
+        editarHifenLabel = new javax.swing.JLabel();
+        avisoEditarPerfilLabel = new javax.swing.JLabel();
 
         generoButtonGroup.add(femininoRadioButton);
         generoButtonGroup.add(masculinoRadioButton);
@@ -681,9 +725,26 @@ public class Biblioteca extends javax.swing.JFrame {
         terminarSessaoMenuLeitorButton.setBorder(null);
         terminarSessaoMenuLeitorButton.setBorderPainted(false);
         terminarSessaoMenuLeitorButton.setContentAreaFilled(false);
+        terminarSessaoMenuLeitorButton.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        terminarSessaoMenuLeitorButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         terminarSessaoMenuLeitorButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 terminarSessaoMenuLeitorButtonActionPerformed(evt);
+            }
+        });
+
+        editarPerfilButton.setBackground(new java.awt.Color(255, 255, 255));
+        editarPerfilButton.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        editarPerfilButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/edit_user-32.png"))); // NOI18N
+        editarPerfilButton.setText("Editar perfil");
+        editarPerfilButton.setBorder(null);
+        editarPerfilButton.setBorderPainted(false);
+        editarPerfilButton.setContentAreaFilled(false);
+        editarPerfilButton.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        editarPerfilButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        editarPerfilButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editarPerfilButtonActionPerformed(evt);
             }
         });
 
@@ -695,16 +756,17 @@ public class Biblioteca extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(cabecalhoMenuLeitorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(cabecalhoMenuLeitorPanelLayout.createSequentialGroup()
-                        .addComponent(bemVindoLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(boasVindasNomeCompletoLabel)
-                        .addGap(0, 423, Short.MAX_VALUE))
-                    .addGroup(cabecalhoMenuLeitorPanelLayout.createSequentialGroup()
                         .addComponent(retornarMenuLeitorButton)
                         .addGap(18, 18, 18)
-                        .addComponent(avancarMenuLeitorButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(terminarSessaoMenuLeitorButton)))
+                        .addComponent(avancarMenuLeitorButton))
+                    .addGroup(cabecalhoMenuLeitorPanelLayout.createSequentialGroup()
+                        .addComponent(bemVindoLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boasVindasNomeCompletoLabel)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 258, Short.MAX_VALUE)
+                .addGroup(cabecalhoMenuLeitorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(terminarSessaoMenuLeitorButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(editarPerfilButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         cabecalhoMenuLeitorPanelLayout.setVerticalGroup(
@@ -718,21 +780,37 @@ public class Biblioteca extends javax.swing.JFrame {
                     .addGroup(cabecalhoMenuLeitorPanelLayout.createSequentialGroup()
                         .addGroup(cabecalhoMenuLeitorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(bemVindoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(boasVindasNomeCompletoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(21, 21, 21)
+                            .addComponent(boasVindasNomeCompletoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(editarPerfilButton))
+                        .addGap(16, 16, 16)
                         .addGroup(cabecalhoMenuLeitorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(retornarMenuLeitorButton)
                             .addComponent(avancarMenuLeitorButton))))
                 .addContainerGap())
         );
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 458, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout menuLeitorLayout = new javax.swing.GroupLayout(menuLeitor);
         menuLeitor.setLayout(menuLeitorLayout);
         menuLeitorLayout.setHorizontalGroup(
             menuLeitorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(menuLeitorLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuLeitorLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(cabecalhoMenuLeitorPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 776, Short.MAX_VALUE)
+                .addGroup(menuLeitorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cabecalhoMenuLeitorPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 776, Short.MAX_VALUE))
                 .addContainerGap())
         );
         menuLeitorLayout.setVerticalGroup(
@@ -740,22 +818,410 @@ public class Biblioteca extends javax.swing.JFrame {
             .addGroup(menuLeitorLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(cabecalhoMenuLeitorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(479, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        requisicao.setMaximumSize(new java.awt.Dimension(800, 600));
-        requisicao.setMinimumSize(new java.awt.Dimension(800, 600));
-        requisicao.setPreferredSize(new java.awt.Dimension(800, 600));
+        menuRequisicao.setMaximumSize(new java.awt.Dimension(800, 600));
+        menuRequisicao.setMinimumSize(new java.awt.Dimension(800, 600));
+        menuRequisicao.setPreferredSize(new java.awt.Dimension(800, 600));
 
-        javax.swing.GroupLayout requisicaoLayout = new javax.swing.GroupLayout(requisicao);
-        requisicao.setLayout(requisicaoLayout);
-        requisicaoLayout.setHorizontalGroup(
-            requisicaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout menuRequisicaoLayout = new javax.swing.GroupLayout(menuRequisicao);
+        menuRequisicao.setLayout(menuRequisicaoLayout);
+        menuRequisicaoLayout.setHorizontalGroup(
+            menuRequisicaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 800, Short.MAX_VALUE)
         );
-        requisicaoLayout.setVerticalGroup(
-            requisicaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        menuRequisicaoLayout.setVerticalGroup(
+            menuRequisicaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 600, Short.MAX_VALUE)
+        );
+
+        menuEditarPerfil.setMaximumSize(new java.awt.Dimension(800, 600));
+        menuEditarPerfil.setMinimumSize(new java.awt.Dimension(800, 600));
+        menuEditarPerfil.setPreferredSize(new java.awt.Dimension(800, 600));
+
+        cabecalhoMenuEditarPanel.setBackground(new java.awt.Color(255, 255, 255));
+        cabecalhoMenuEditarPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        cabecalhoMenuEditarPanel.setPreferredSize(new java.awt.Dimension(777, 106));
+
+        bemVindoLabel1.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
+        bemVindoLabel1.setText("Afinal o que está mal?");
+
+        retornarMenuLeitorButton2.setBackground(new java.awt.Color(255, 255, 255));
+        retornarMenuLeitorButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/left_round-32.png"))); // NOI18N
+        retornarMenuLeitorButton2.setBorder(null);
+        retornarMenuLeitorButton2.setBorderPainted(false);
+        retornarMenuLeitorButton2.setContentAreaFilled(false);
+        retornarMenuLeitorButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                retornarMenuLeitorButton2ActionPerformed(evt);
+            }
+        });
+
+        avancarMenuLeitorButton1.setBackground(new java.awt.Color(255, 255, 255));
+        avancarMenuLeitorButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/right_round-32.png"))); // NOI18N
+        avancarMenuLeitorButton1.setBorder(null);
+        avancarMenuLeitorButton1.setBorderPainted(false);
+        avancarMenuLeitorButton1.setContentAreaFilled(false);
+        avancarMenuLeitorButton1.setEnabled(false);
+        avancarMenuLeitorButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                avancarMenuLeitorButton1ActionPerformed(evt);
+            }
+        });
+
+        terminarSessaoMenuLeitorButton1.setBackground(new java.awt.Color(255, 255, 255));
+        terminarSessaoMenuLeitorButton1.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        terminarSessaoMenuLeitorButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit-32.png"))); // NOI18N
+        terminarSessaoMenuLeitorButton1.setText("Terminar Sessão");
+        terminarSessaoMenuLeitorButton1.setBorder(null);
+        terminarSessaoMenuLeitorButton1.setBorderPainted(false);
+        terminarSessaoMenuLeitorButton1.setContentAreaFilled(false);
+        terminarSessaoMenuLeitorButton1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        terminarSessaoMenuLeitorButton1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        terminarSessaoMenuLeitorButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                terminarSessaoMenuLeitorButton1ActionPerformed(evt);
+            }
+        });
+
+        retornarMenuLeitorButton3.setBackground(new java.awt.Color(255, 255, 255));
+        retornarMenuLeitorButton3.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        retornarMenuLeitorButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/edit_user-32.png"))); // NOI18N
+        retornarMenuLeitorButton3.setText("Editar perfil");
+        retornarMenuLeitorButton3.setBorder(null);
+        retornarMenuLeitorButton3.setBorderPainted(false);
+        retornarMenuLeitorButton3.setContentAreaFilled(false);
+        retornarMenuLeitorButton3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        retornarMenuLeitorButton3.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        retornarMenuLeitorButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                retornarMenuLeitorButton3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout cabecalhoMenuEditarPanelLayout = new javax.swing.GroupLayout(cabecalhoMenuEditarPanel);
+        cabecalhoMenuEditarPanel.setLayout(cabecalhoMenuEditarPanelLayout);
+        cabecalhoMenuEditarPanelLayout.setHorizontalGroup(
+            cabecalhoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cabecalhoMenuEditarPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(cabecalhoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(cabecalhoMenuEditarPanelLayout.createSequentialGroup()
+                        .addComponent(retornarMenuLeitorButton2)
+                        .addGap(18, 18, 18)
+                        .addComponent(avancarMenuLeitorButton1)
+                        .addGap(0, 499, Short.MAX_VALUE))
+                    .addComponent(bemVindoLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(cabecalhoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(terminarSessaoMenuLeitorButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(retornarMenuLeitorButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        cabecalhoMenuEditarPanelLayout.setVerticalGroup(
+            cabecalhoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cabecalhoMenuEditarPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(cabecalhoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(cabecalhoMenuEditarPanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(terminarSessaoMenuLeitorButton1))
+                    .addGroup(cabecalhoMenuEditarPanelLayout.createSequentialGroup()
+                        .addGroup(cabecalhoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(bemVindoLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(retornarMenuLeitorButton3))
+                        .addGap(16, 16, 16)
+                        .addGroup(cabecalhoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(retornarMenuLeitorButton2)
+                            .addComponent(avancarMenuLeitorButton1))))
+                .addContainerGap())
+        );
+
+        registoMenuEditarPanel.setBackground(new java.awt.Color(255, 255, 255));
+        registoMenuEditarPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        editarNomeCompletoLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        editarNomeCompletoLabel.setText("Nome Completo:");
+
+        editarNomeCompletoField.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        editarNomeCompletoField.setText("Tomás Luís Fonseca Francisco");
+
+        editarEmailLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        editarEmailLabel.setText("E-mail:");
+
+        editarEmailField.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        editarEmailField.setText("mail@tomasfrancisco.com");
+
+        editarReEmailLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        editarReEmailLabel.setText("Reintroduza o E-mail:");
+
+        editarReEmailField.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        editarReEmailField.setText("mail@tomasfrancisco.com");
+
+        editarPalavraPasseRegistoLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        editarPalavraPasseRegistoLabel.setText("Palavra-passe:");
+
+        editarRePalavraPasseRegistoLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        editarRePalavraPasseRegistoLabel.setText("Reintroduza a Palavra-passe:");
+
+        editarDataNascimentoLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        editarDataNascimentoLabel.setText("Data de Nascimento:");
+
+        editarDiaComboBox.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        editarDiaComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Dia", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+
+        editarMesComboBox.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        editarMesComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mês", "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" }));
+
+        editarAnoComboBox.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        editarAnoComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Ano", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970", "1969", "1968", "1967", "1966", "1965", "1964", "1963", "1962", "1961", "1960", "1959", "1958", "1957", "1956", "1955", "1954", "1953", "1952", "1951", "1950", "1949", "1948", "1947", "1946", "1945", "1944", "1943", "1942", "1941", "1940", "1939", "1938", "1937", "1936", "1935", "1934", "1933", "1932", "1931", "1930", "1929", "1928", "1927", "1926", "1925", "1924", "1923", "1922", "1921", "1920", "1919", "1918", "1917", "1916", "1915", "1914", "1913", "1912", "1911", "1910", "1909", "1908", "1907", "1906", "1905", "1904", "1903", "1902", "1901", "1900" }));
+
+        editarGeneroLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        editarGeneroLabel.setText("Género:");
+
+        editarFemininoRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        editarFemininoRadioButton.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        editarFemininoRadioButton.setText("Feminino");
+
+        editarMasculinoRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        editarMasculinoRadioButton.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        editarMasculinoRadioButton.setText("Masculino");
+
+        editarPalavraPasseRegistoField.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        editarPalavraPasseRegistoField.setText("tomas");
+
+        editarRePalavraPasseRegistoField.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        editarRePalavraPasseRegistoField.setText("jPasswordField2");
+
+        javax.swing.GroupLayout registoMenuEditarPanelLayout = new javax.swing.GroupLayout(registoMenuEditarPanel);
+        registoMenuEditarPanel.setLayout(registoMenuEditarPanelLayout);
+        registoMenuEditarPanelLayout.setHorizontalGroup(
+            registoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(registoMenuEditarPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(registoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(editarNomeCompletoField)
+                    .addComponent(editarNomeCompletoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(editarEmailLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(editarEmailField)
+                    .addComponent(editarReEmailField)
+                    .addComponent(editarPalavraPasseRegistoField)
+                    .addGroup(registoMenuEditarPanelLayout.createSequentialGroup()
+                        .addGroup(registoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(registoMenuEditarPanelLayout.createSequentialGroup()
+                                .addComponent(editarDiaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(editarMesComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(editarAnoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(editarDataNascimentoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(registoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(registoMenuEditarPanelLayout.createSequentialGroup()
+                                .addComponent(editarFemininoRadioButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(editarMasculinoRadioButton))
+                            .addGroup(registoMenuEditarPanelLayout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(editarGeneroLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(editarRePalavraPasseRegistoField)
+                    .addComponent(editarPalavraPasseRegistoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(editarRePalavraPasseRegistoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(editarReEmailLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        registoMenuEditarPanelLayout.setVerticalGroup(
+            registoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(registoMenuEditarPanelLayout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addComponent(editarNomeCompletoLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(editarNomeCompletoField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(editarEmailLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(editarEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(editarReEmailLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(editarReEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(editarPalavraPasseRegistoLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(editarPalavraPasseRegistoField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(editarRePalavraPasseRegistoLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(editarRePalavraPasseRegistoField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(registoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(editarDataNascimentoLabel)
+                    .addComponent(editarGeneroLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(registoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(editarDiaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editarMesComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editarAnoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editarFemininoRadioButton)
+                    .addComponent(editarMasculinoRadioButton))
+                .addContainerGap(73, Short.MAX_VALUE))
+        );
+
+        completarRegistoMenuEditarPanel.setBackground(new java.awt.Color(255, 255, 255));
+        completarRegistoMenuEditarPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        completarRegistoMenuEditarPanel.setPreferredSize(new java.awt.Dimension(371, 459));
+
+        editarMoradaLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        editarMoradaLabel.setText("Morada, Nº Porta:");
+
+        editarMoradaField.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        editarMoradaField.setText("Bairro da Reboleirada, Nº 6");
+
+        editarCodigoPostalLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        editarCodigoPostalLabel.setText("Código postal:");
+
+        editarCodigoPostalField1.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        editarCodigoPostalField1.setText("6215");
+
+        editarTelefoneLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        editarTelefoneLabel.setText("Telefone:");
+
+        editarCodigoPostalField2.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        editarCodigoPostalField2.setText("318");
+        editarCodigoPostalField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editarCodigoPostalField2ActionPerformed(evt);
+            }
+        });
+
+        editarLocalidadeField.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        editarLocalidadeField.setText("Paul, Covilhã");
+
+        editarLocalidadeLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        editarLocalidadeLabel.setText("Localidade:");
+
+        editarTelefoneField.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        editarTelefoneField.setText("968158474");
+        editarTelefoneField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editarTelefoneFieldActionPerformed(evt);
+            }
+        });
+
+        editarDefinirUsernameLabel.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
+        editarDefinirUsernameLabel.setText("Defina um username:");
+
+        editarUsernameAvisoLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        editarUsernameAvisoLabel.setText("Permite-lhe iniciar sessão");
+
+        editarDefinirUsernameField.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        editarDefinirUsernameField.setText("tfrancisco");
+        editarDefinirUsernameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editarDefinirUsernameFieldActionPerformed(evt);
+            }
+        });
+
+        editarHifenLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        editarHifenLabel.setText("-");
+
+        avisoEditarPerfilLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
+        avisoEditarPerfilLabel.setForeground(new java.awt.Color(255, 0, 0));
+        avisoEditarPerfilLabel.setText("Avisos");
+
+        javax.swing.GroupLayout completarRegistoMenuEditarPanelLayout = new javax.swing.GroupLayout(completarRegistoMenuEditarPanel);
+        completarRegistoMenuEditarPanel.setLayout(completarRegistoMenuEditarPanelLayout);
+        completarRegistoMenuEditarPanelLayout.setHorizontalGroup(
+            completarRegistoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(completarRegistoMenuEditarPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(completarRegistoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(editarMoradaField)
+                    .addComponent(editarMoradaLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(completarRegistoMenuEditarPanelLayout.createSequentialGroup()
+                        .addGroup(completarRegistoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(editarCodigoPostalLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(completarRegistoMenuEditarPanelLayout.createSequentialGroup()
+                                .addComponent(editarCodigoPostalField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(editarHifenLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(editarCodigoPostalField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(12, 12, 12)
+                        .addGroup(completarRegistoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(editarLocalidadeField)
+                            .addComponent(editarLocalidadeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(editarDefinirUsernameLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(editarUsernameAvisoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(editarDefinirUsernameField)
+                    .addGroup(completarRegistoMenuEditarPanelLayout.createSequentialGroup()
+                        .addGroup(completarRegistoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(editarTelefoneField)
+                            .addComponent(editarTelefoneLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(avisoEditarPerfilLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        completarRegistoMenuEditarPanelLayout.setVerticalGroup(
+            completarRegistoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(completarRegistoMenuEditarPanelLayout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addComponent(editarMoradaLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(editarMoradaField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(completarRegistoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(editarCodigoPostalLabel)
+                    .addComponent(editarLocalidadeLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(completarRegistoMenuEditarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(editarCodigoPostalField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editarCodigoPostalField2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editarLocalidadeField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editarHifenLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(editarTelefoneLabel)
+                .addGap(1, 1, 1)
+                .addComponent(editarTelefoneField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(editarDefinirUsernameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(editarUsernameAvisoLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(editarDefinirUsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(avisoEditarPerfilLabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout menuEditarPerfilLayout = new javax.swing.GroupLayout(menuEditarPerfil);
+        menuEditarPerfil.setLayout(menuEditarPerfilLayout);
+        menuEditarPerfilLayout.setHorizontalGroup(
+            menuEditarPerfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menuEditarPerfilLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(menuEditarPerfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(menuEditarPerfilLayout.createSequentialGroup()
+                        .addComponent(registoMenuEditarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(completarRegistoMenuEditarPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 398, Short.MAX_VALUE))
+                    .addComponent(cabecalhoMenuEditarPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 776, Short.MAX_VALUE))
+                .addGap(14, 14, 14))
+        );
+        menuEditarPerfilLayout.setVerticalGroup(
+            menuEditarPerfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menuEditarPerfilLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(cabecalhoMenuEditarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(menuEditarPerfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(registoMenuEditarPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(completarRegistoMenuEditarPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE))
+                .addGap(15, 15, 15))
         );
 
         javax.swing.GroupLayout bibliotecaGUILayout = new javax.swing.GroupLayout(bibliotecaGUI);
@@ -778,7 +1244,12 @@ public class Biblioteca extends javax.swing.JFrame {
             .addGroup(bibliotecaGUILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(bibliotecaGUILayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(requisicao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(menuRequisicao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(bibliotecaGUILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(bibliotecaGUILayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(menuEditarPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         bibliotecaGUILayout.setVerticalGroup(
@@ -799,13 +1270,19 @@ public class Biblioteca extends javax.swing.JFrame {
             .addGroup(bibliotecaGUILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(bibliotecaGUILayout.createSequentialGroup()
                     .addGap(0, 10, Short.MAX_VALUE)
-                    .addComponent(requisicao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(menuRequisicao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(bibliotecaGUILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(bibliotecaGUILayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(menuEditarPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         bibliotecaGUI.setLayer(menuBiblioteca, javax.swing.JLayeredPane.DEFAULT_LAYER);
         bibliotecaGUI.setLayer(menuCompletarDados, javax.swing.JLayeredPane.DEFAULT_LAYER);
         bibliotecaGUI.setLayer(menuLeitor, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        bibliotecaGUI.setLayer(requisicao, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        bibliotecaGUI.setLayer(menuRequisicao, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        bibliotecaGUI.setLayer(menuEditarPerfil, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -844,7 +1321,7 @@ public class Biblioteca extends javax.swing.JFrame {
 
     private void avancarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_avancarButtonActionPerformed
         String morada = moradaField.getText();
-        String codigoPostar = codigoPostalField1.getText() + "-" + codigoPostalField2.getText();
+        String codigoPostar = codigoPostalField1.getText() + " - " + codigoPostalField2.getText();
         String localidade = localidadeField.getText();
         String telefone = telefoneField.getText();
         String username = definirUsernameField.getText();
@@ -948,6 +1425,7 @@ public class Biblioteca extends javax.swing.JFrame {
         String dia = diaComboBox.getSelectedItem().toString();
         String mes = mesComboBox.getSelectedItem().toString();
         String ano = anoComboBox.getSelectedItem().toString();
+        System.out.println(ano);
         String dataNascimento = dia + " de " + mes + " de " + ano;
         String genero;
         
@@ -1013,13 +1491,64 @@ public class Biblioteca extends javax.swing.JFrame {
         System.out.println("Registo efectuado com sucesso");        
     }//GEN-LAST:event_registarButtonActionPerformed
 
-    private void palavraPasseRegistoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palavraPasseRegistoFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_palavraPasseRegistoFieldActionPerformed
+    private void editarPerfilButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarPerfilButtonActionPerformed
+        Utilizador user = Gestor.getUtilizador(usernameField.getText());
+        
+        editarNomeCompletoField.setText(user.getNome());
+        editarEmailField.setText(user.getEmail());
+        editarReEmailField.setText("");
+        editarPalavraPasseRegistoField.setText(user.getPassword());
+        editarRePalavraPasseRegistoField.setText("");
+        editarDiaComboBox.setSelectedItem(user.getDataDia());
+        editarMesComboBox.setSelectedItem(user.getDataMes());
+        editarAnoComboBox.setSelectedItem(user.getDataAno());
+        switch (user.getGenero()) {
+            case "Masculino":
+                editarMasculinoRadioButton.setSelected(true);
+                break;
+            case "Feminino":
+                editarFemininoRadioButton.setSelected(true);
+                break;
+            default:
+                generoButtonGroup.clearSelection();
+                break;
+        }
+        editarMoradaField.setText(user.getMorada());
+        editarCodigoPostalField1.setText(user.getCodigo_postalFirst());
+        editarCodigoPostalField2.setText(user.getCodigo_postalLast());
+        editarDefinirUsernameField.setText(user.getUsername());                
+        
+        menuLeitor.setVisible(false);
+        menuEditarPerfil.setVisible(true);
+    }//GEN-LAST:event_editarPerfilButtonActionPerformed
 
-    private void palavraPasseFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palavraPasseFieldActionPerformed
+    private void retornarMenuLeitorButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retornarMenuLeitorButton2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_palavraPasseFieldActionPerformed
+    }//GEN-LAST:event_retornarMenuLeitorButton2ActionPerformed
+
+    private void avancarMenuLeitorButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_avancarMenuLeitorButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_avancarMenuLeitorButton1ActionPerformed
+
+    private void terminarSessaoMenuLeitorButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terminarSessaoMenuLeitorButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_terminarSessaoMenuLeitorButton1ActionPerformed
+
+    private void retornarMenuLeitorButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retornarMenuLeitorButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_retornarMenuLeitorButton3ActionPerformed
+
+    private void editarCodigoPostalField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarCodigoPostalField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editarCodigoPostalField2ActionPerformed
+
+    private void editarTelefoneFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarTelefoneFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editarTelefoneFieldActionPerformed
+
+    private void editarDefinirUsernameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarDefinirUsernameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editarDefinirUsernameFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1055,25 +1584,61 @@ public class Biblioteca extends javax.swing.JFrame {
     private javax.swing.JComboBox anoComboBox;
     private javax.swing.JButton avancarButton;
     private javax.swing.JButton avancarMenuLeitorButton;
+    private javax.swing.JButton avancarMenuLeitorButton1;
     private javax.swing.JLabel avisoCompletarDadosLabel;
+    private javax.swing.JLabel avisoEditarPerfilLabel;
     private javax.swing.JLabel avisosInicioSessaoLabel;
     private javax.swing.JLabel avisosRegistoLabel;
     private javax.swing.JLabel bemVindoLabel;
+    private javax.swing.JLabel bemVindoLabel1;
     private javax.swing.JDesktopPane bibliotecaGUI;
     private javax.swing.JLabel bibliotecaLabel;
     private javax.swing.JLabel boasVindasNomeCompletoLabel;
     private javax.swing.JPanel cabecalhoBibliotecaPanel;
     private javax.swing.JPanel cabecalhoCompletarDadosPanel;
+    private javax.swing.JPanel cabecalhoMenuEditarPanel;
     private javax.swing.JPanel cabecalhoMenuLeitorPanel;
     private javax.swing.JTextField codigoPostalField1;
     private javax.swing.JTextField codigoPostalField2;
     private javax.swing.JLabel codigoPostalLabel;
+    private javax.swing.JPanel completarRegistoMenuEditarPanel;
     private javax.swing.JPanel completarRegistoPanel;
     private javax.swing.JLabel completeLabel;
     private javax.swing.JLabel dataNascimentoLabel;
     private javax.swing.JTextField definirUsernameField;
     private javax.swing.JLabel definirUsernameLabel;
     private javax.swing.JComboBox diaComboBox;
+    private javax.swing.JComboBox editarAnoComboBox;
+    private javax.swing.JTextField editarCodigoPostalField1;
+    private javax.swing.JTextField editarCodigoPostalField2;
+    private javax.swing.JLabel editarCodigoPostalLabel;
+    private javax.swing.JLabel editarDataNascimentoLabel;
+    private javax.swing.JTextField editarDefinirUsernameField;
+    private javax.swing.JLabel editarDefinirUsernameLabel;
+    private javax.swing.JComboBox editarDiaComboBox;
+    private javax.swing.JTextField editarEmailField;
+    private javax.swing.JLabel editarEmailLabel;
+    private javax.swing.JRadioButton editarFemininoRadioButton;
+    private javax.swing.JLabel editarGeneroLabel;
+    private javax.swing.JLabel editarHifenLabel;
+    private javax.swing.JTextField editarLocalidadeField;
+    private javax.swing.JLabel editarLocalidadeLabel;
+    private javax.swing.JRadioButton editarMasculinoRadioButton;
+    private javax.swing.JComboBox editarMesComboBox;
+    private javax.swing.JTextField editarMoradaField;
+    private javax.swing.JLabel editarMoradaLabel;
+    private javax.swing.JTextField editarNomeCompletoField;
+    private javax.swing.JLabel editarNomeCompletoLabel;
+    private javax.swing.JPasswordField editarPalavraPasseRegistoField;
+    private javax.swing.JLabel editarPalavraPasseRegistoLabel;
+    private javax.swing.JButton editarPerfilButton;
+    private javax.swing.JTextField editarReEmailField;
+    private javax.swing.JLabel editarReEmailLabel;
+    private javax.swing.JPasswordField editarRePalavraPasseRegistoField;
+    private javax.swing.JLabel editarRePalavraPasseRegistoLabel;
+    private javax.swing.JTextField editarTelefoneField;
+    private javax.swing.JLabel editarTelefoneLabel;
+    private javax.swing.JLabel editarUsernameAvisoLabel;
     private javax.swing.JTextField emailField;
     private javax.swing.JLabel emailLabel;
     private javax.swing.JRadioButton femininoRadioButton;
@@ -1085,12 +1650,15 @@ public class Biblioteca extends javax.swing.JFrame {
     private javax.swing.JPanel imagemCompletarDadosPanel;
     private javax.swing.JButton iniciarSessaoButton;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField localidadeField;
     private javax.swing.JLabel localidadeLabel;
     private javax.swing.JRadioButton masculinoRadioButton;
     private javax.swing.JPanel menuBiblioteca;
     private javax.swing.JPanel menuCompletarDados;
+    private javax.swing.JPanel menuEditarPerfil;
     private javax.swing.JPanel menuLeitor;
+    private javax.swing.JPanel menuRequisicao;
     private javax.swing.JComboBox mesComboBox;
     private javax.swing.JTextField moradaField;
     private javax.swing.JLabel moradaLabel;
@@ -1108,12 +1676,15 @@ public class Biblioteca extends javax.swing.JFrame {
     private javax.swing.JPasswordField rePalavraPasseRegistoField;
     private javax.swing.JLabel rePalavraPasseRegistoLabel;
     private javax.swing.JButton registarButton;
-    private javax.swing.JPanel requisicao;
+    private javax.swing.JPanel registoMenuEditarPanel;
     private javax.swing.JButton retornarButton;
     private javax.swing.JButton retornarMenuLeitorButton;
+    private javax.swing.JButton retornarMenuLeitorButton2;
+    private javax.swing.JButton retornarMenuLeitorButton3;
     private javax.swing.JTextField telefoneField;
     private javax.swing.JLabel telefoneLabel;
     private javax.swing.JButton terminarSessaoMenuLeitorButton;
+    private javax.swing.JButton terminarSessaoMenuLeitorButton1;
     private javax.swing.JLabel usernameAvisoLabel;
     private javax.swing.JTextField usernameField;
     private javax.swing.JLabel usernameLabel;
