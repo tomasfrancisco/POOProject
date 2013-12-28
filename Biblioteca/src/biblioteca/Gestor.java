@@ -419,7 +419,7 @@ abstract class Gestor {
         }
         
         /**
-         * Este Metodo tem como funcao a verificacao se 
+         * Retorna true se o username verificado já existe na base de dados
          * @param user
          * @param telefone
          * @return 
@@ -430,30 +430,53 @@ abstract class Gestor {
             {   
                 if(Gestor.getUtilizadores().get(i).getUsername().equals(user))
                 {
-                     return false;
+                     return true;
                 }
             }
-            return true;
+            return false;
         }
-         public static boolean verificaTelefone(String telefone)
-         {
-            for(int i=0;i<Gestor.getUtilizadores().size();i++)        
-            {
-                if(Gestor.getUtilizadores().get(i).getTelefone().equals(telefone))
-                {
-                    return false;
-                }
-            }
-            return true;         
-         }
-         public static boolean verificaEmail(String email)
+        
+        /**
+         * Retorna true se o telefone verificado já existe na base de dados
+         * @param telefone
+         * @return 
+         */
+        public static boolean verificaTelefone(String telefone)
+        {
+           for(int i=0;i<Gestor.getUtilizadores().size();i++)        
+           {
+               if(Gestor.getUtilizadores().get(i).getTelefone().equals(telefone))
+               {
+                   return true;
+               }
+           }
+           return false;         
+        }
+         
+        
+        /**
+         * Retorna true se o email verificado já existe na base de dados
+         * @param email
+         * @return 
+         */
+        public static boolean verificaEmail(String email)
         {
             for(int i=0;i<Gestor.getUtilizadores().size();i++)        
             {
                 if(Gestor.getUtilizadores().get(i).getEmail().equals(email))
-                    return false;
+                    return true;
             }
-            return true;
+            return false;
         } 
+        
+        public static boolean verificaPrimeiraVez(String email)
+        {
+            for(int i=0;i<Gestor.getUtilizadores().size();i++)        
+            {
+                if(Gestor.getUtilizadores().get(i).getUsername().equals("NULL"))
+                    return true;
+            }
+            return false;
+        }
 }
 
