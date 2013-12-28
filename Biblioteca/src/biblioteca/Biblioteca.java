@@ -106,7 +106,6 @@ public class Biblioteca extends javax.swing.JFrame {
 
         bibliotecaGUI.setMaximumSize(new java.awt.Dimension(800, 600));
         bibliotecaGUI.setMinimumSize(new java.awt.Dimension(800, 600));
-        bibliotecaGUI.setPreferredSize(new java.awt.Dimension(800, 600));
 
         menuBiblioteca.setBackground(new java.awt.Color(255, 255, 255));
         menuBiblioteca.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -755,7 +754,7 @@ public class Biblioteca extends javax.swing.JFrame {
         bibliotecaGUI.setLayout(bibliotecaGUILayout);
         bibliotecaGUILayout.setHorizontalGroup(
             bibliotecaGUILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGap(0, 805, Short.MAX_VALUE)
             .addGroup(bibliotecaGUILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(bibliotecaGUILayout.createSequentialGroup()
                     .addComponent(menuBiblioteca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
