@@ -42,7 +42,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="modelo" alignment="0" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Component id="autenticacao" alignment="0" max="32767" attributes="0"/>
+              <Component id="autenticacao" alignment="0" pref="1044" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
@@ -78,7 +78,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="modelo" alignment="0" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Component id="autenticacao" alignment="0" max="32767" attributes="0"/>
+              <Component id="autenticacao" alignment="0" pref="790" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
@@ -162,7 +162,7 @@
                           <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                           <Component id="rodapeAutenticacao" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="imageAutenticacao" pref="605" max="32767" attributes="0"/>
+                      <Component id="imageAutenticacao" pref="627" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               </Group>
