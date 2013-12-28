@@ -6,6 +6,7 @@
 
 package biblioteca;
 
+
 /**
  *
  * @author tomas
@@ -106,7 +107,6 @@ public class Biblioteca extends javax.swing.JFrame {
 
         bibliotecaGUI.setMaximumSize(new java.awt.Dimension(800, 600));
         bibliotecaGUI.setMinimumSize(new java.awt.Dimension(800, 600));
-        bibliotecaGUI.setPreferredSize(new java.awt.Dimension(800, 600));
 
         menuBiblioteca.setBackground(new java.awt.Color(255, 255, 255));
         menuBiblioteca.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -135,11 +135,15 @@ public class Biblioteca extends javax.swing.JFrame {
 
         palavraPasseLabel.setText("Palavra-passe:");
 
-        palavraPasseField.setText("tomas");
+        palavraPasseField.setText("admin");
+        palavraPasseField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                palavraPasseFieldActionPerformed(evt);
+            }
+        });
 
         avisosInicioSessaoLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
         avisosInicioSessaoLabel.setForeground(new java.awt.Color(255, 0, 0));
-        avisosInicioSessaoLabel.setText("Avisos");
 
         javax.swing.GroupLayout cabecalhoBibliotecaPanelLayout = new javax.swing.GroupLayout(cabecalhoBibliotecaPanel);
         cabecalhoBibliotecaPanel.setLayout(cabecalhoBibliotecaPanelLayout);
@@ -267,13 +271,17 @@ public class Biblioteca extends javax.swing.JFrame {
 
         avisosRegistoLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
         avisosRegistoLabel.setForeground(new java.awt.Color(255, 0, 0));
-        avisosRegistoLabel.setText("Avisos");
 
         palavraPasseRegistoField.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        palavraPasseRegistoField.setText("tomas");
+        palavraPasseRegistoField.setText("admin");
+        palavraPasseRegistoField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                palavraPasseRegistoFieldActionPerformed(evt);
+            }
+        });
 
         rePalavraPasseRegistoField.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        rePalavraPasseRegistoField.setText("jPasswordField2");
+        rePalavraPasseRegistoField.setText("admin");
 
         javax.swing.GroupLayout novoRegistoBibliotecaPanelLayout = new javax.swing.GroupLayout(novoRegistoBibliotecaPanel);
         novoRegistoBibliotecaPanel.setLayout(novoRegistoBibliotecaPanelLayout);
@@ -353,7 +361,7 @@ public class Biblioteca extends javax.swing.JFrame {
                     .addComponent(femininoRadioButton)
                     .addComponent(masculinoRadioButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(avisosRegistoLabel)
+                .addComponent(avisosRegistoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(registarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -380,7 +388,7 @@ public class Biblioteca extends javax.swing.JFrame {
                 .addComponent(cabecalhoBibliotecaPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(menuBibliotecaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(imagemBibliotecaPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(imagemBibliotecaPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 472, Short.MAX_VALUE)
                     .addComponent(novoRegistoBibliotecaPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -464,13 +472,13 @@ public class Biblioteca extends javax.swing.JFrame {
         codigoPostalLabel.setText("Código postal:");
 
         codigoPostalField1.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
-        codigoPostalField1.setText("6215");
+        codigoPostalField1.setText("3020");
 
         telefoneLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
         telefoneLabel.setText("Telefone:");
 
         codigoPostalField2.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
-        codigoPostalField2.setText("318");
+        codigoPostalField2.setText("113");
         codigoPostalField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 codigoPostalField2ActionPerformed(evt);
@@ -510,7 +518,6 @@ public class Biblioteca extends javax.swing.JFrame {
 
         avisoCompletarDadosLabel.setFont(new java.awt.Font("Segoe UI Emoji", 0, 12)); // NOI18N
         avisoCompletarDadosLabel.setForeground(new java.awt.Color(255, 0, 0));
-        avisoCompletarDadosLabel.setText("Avisos");
 
         javax.swing.GroupLayout completarRegistoPanelLayout = new javax.swing.GroupLayout(completarRegistoPanel);
         completarRegistoPanel.setLayout(completarRegistoPanelLayout);
@@ -527,11 +534,11 @@ public class Biblioteca extends javax.swing.JFrame {
                             .addComponent(codigoPostalLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(completarRegistoPanelLayout.createSequentialGroup()
                                 .addComponent(codigoPostalField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(3, 3, 3)
                                 .addComponent(hifenLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(codigoPostalField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(12, 12, 12)
+                                .addComponent(codigoPostalField2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(completarRegistoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(localidadeField)
                             .addComponent(localidadeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -576,8 +583,8 @@ public class Biblioteca extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(definirUsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(avisoCompletarDadosLabel)
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addComponent(avisoCompletarDadosLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         imagemCompletarDadosPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -852,13 +859,46 @@ public class Biblioteca extends javax.swing.JFrame {
             avisoCompletarDadosLabel.setText("Este username já se encontra registado");
             return;
         }
+        else if(morada.equals(""))
+        {
+            avisoCompletarDadosLabel.setText("Verifique o campo Morada");
+            return;
+        }
+        else if((codigoPostalField1.getText().equals(""))||(codigoPostalField2.getText().equals("")))
+        {
+            avisoCompletarDadosLabel.setText("Verifique o campo Código Postal");
+            return;
+        }
+        else if(localidade.equals(""))
+        {
+            avisoCompletarDadosLabel.setText("Verifique o campo Localidade");
+            return;
+        }
+        else if(telefone.equals("")||(telefone.length()!=9))
+        {
+            avisoCompletarDadosLabel.setText("Verifique o campo Telefone");
+            return;
+        }
+        else if(username.equals(""))
+        {
+            avisoCompletarDadosLabel.setText("Verifique o campo Username");
+            return;
+        }
+        
         
         Utilizador user = Gestor.getUtilizador(usernameField.getText());
         user.setMorada(morada);
         user.setCodigo_postal(codigoPostar);
         user.setLocalidade(localidade);
         user.setTelefone(telefone);
-        user.setUsername(username);     
+        user.setUsername(username);
+        moradaField.setText("");
+        codigoPostalField1.setText("");
+        codigoPostalField2.setText("");
+        localidadeField.setText("");
+        telefoneField.setText("");
+        definirUsernameField.setText("");
+        avisoCompletarDadosLabel.setText("");
         
         menuCompletarDados.setVisible(false);
         menuLeitor.setVisible(true);
@@ -879,9 +919,10 @@ public class Biblioteca extends javax.swing.JFrame {
     private void iniciarSessaoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarSessaoButtonActionPerformed
         String username = usernameField.getText();
         String palavraPasse = new String(palavraPasseField.getPassword());
-        
+        avisosRegistoLabel.setText("");
         if(Gestor.login(username, palavraPasse))
         {
+            
             menuBiblioteca.setVisible(false);
             if(Gestor.verificaPrimeiraVez(username))
             {
@@ -893,7 +934,9 @@ public class Biblioteca extends javax.swing.JFrame {
             }
         }
         else
+        {
             avisosInicioSessaoLabel.setText("Dados inválidos");
+        }
     }//GEN-LAST:event_iniciarSessaoButtonActionPerformed
 
     private void registarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registarButtonActionPerformed
@@ -909,9 +952,13 @@ public class Biblioteca extends javax.swing.JFrame {
         String genero;
         
         if(this.femininoRadioButton.isSelected())
+        {
             genero = "Feminino";
+        }
         else if(masculinoRadioButton.isSelected())
+        {
             genero = "Masculino";
+        }            
         else
         {
             avisosRegistoLabel.setText("Verifique o campo género");
@@ -924,8 +971,33 @@ public class Biblioteca extends javax.swing.JFrame {
             System.out.println("Registo não efectuado com sucesso");
             return;
         }
-        
+        else if(nomeCompleto.equals(""))
+        {
+            avisosRegistoLabel.setText("Verifique o campo Nome Completo");
+            System.out.println("Registo não efectuado com sucesso");
+            return;
+        }
+        else if(email.equals(reEmail)==false)
+        {
+            avisosRegistoLabel.setText("Verifique o campo Email");
+            System.out.println("Registo não efectuado com sucesso");
+            return;   
+        }
+        else if(palavraPasse.equals(rePalavraPasse)==false)
+        {
+            avisosRegistoLabel.setText("Verifique o campo Palavra Passe");
+            System.out.println("Registo não efectuado com sucesso");
+            return;   
+        }
+        else if(dia.equals("Dia")||(mes.equals("Mes"))||(ano.equals("Ano")))
+        {
+            avisosRegistoLabel.setText("Verifique o campo Data");
+            System.out.println("Registo não efectuado com sucesso");
+            return;   
+        }
+            
         Gestor.setUtilizador(new Leitor(nomeCompleto, genero, "NULL", "NULL", "NULL", "NULL", email, dataNascimento, "NULL", palavraPasse, Utilizador.ALUNO));
+        avisosRegistoLabel.setText("Registo Efectuado com sucesso");
         System.out.println(Gestor.getUtilizadores().size());
         
         nomeCompletoField.setText("");
@@ -936,11 +1008,18 @@ public class Biblioteca extends javax.swing.JFrame {
         diaComboBox.setSelectedIndex(0);
         mesComboBox.setSelectedIndex(0);
         anoComboBox.setSelectedIndex(0);
-        femininoRadioButton.setSelected(false);
-        masculinoRadioButton.setSelected(false);
+        generoButtonGroup.clearSelection();
         
         System.out.println("Registo efectuado com sucesso");        
     }//GEN-LAST:event_registarButtonActionPerformed
+
+    private void palavraPasseRegistoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palavraPasseRegistoFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palavraPasseRegistoFieldActionPerformed
+
+    private void palavraPasseFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palavraPasseFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palavraPasseFieldActionPerformed
 
     /**
      * @param args the command line arguments
