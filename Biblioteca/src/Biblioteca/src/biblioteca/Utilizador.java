@@ -1,7 +1,5 @@
 package biblioteca;
 
-import java.util.*;
-
 abstract class Utilizador {
     
 	protected String nome;
@@ -75,40 +73,6 @@ abstract class Utilizador {
         }
         
         /**
-         * Retorna o primeiro campo do código postal
-         * @return 
-         */
-        public String getCodigo_postalFirst()
-        {
-            String field = null;
-            
-            StringTokenizer token = new StringTokenizer(this.codigo_postal);
-            
-            if(token.hasMoreElements())
-            {
-                field = token.nextToken();
-            }
-            return field;
-        }
-        
-        /**
-         * Retorna o segundo campo do código postal
-         * @return 
-         */
-        public String getCodigo_postalLast()
-        {
-            String field = null;
-            
-            StringTokenizer token = new StringTokenizer(this.codigo_postal);
-            
-            while(token.hasMoreElements())
-            {
-                field = token.nextToken();
-            }
-            return field;
-        }
-        
-        /**
 	 * 
 	 * @param codigo_postal
 	 */
@@ -156,62 +120,6 @@ abstract class Utilizador {
 	public String getData_nascimento() {
 		return this.data_nascimento;
 	}
-        
-        /**
-         * Faz um parse à data de nascimento e retorna o dia
-         * @return 
-         */
-        public String getDataDia()
-        {
-            String dia = null;
-            
-            StringTokenizer token = new StringTokenizer(this.data_nascimento);
-            
-            if(token.hasMoreElements())
-            {
-                dia = token.nextToken();
-            }
-            return dia;
-        }
-        
-        /**
-         * Faz um parse à data de nascimento e retorna o mes (ex. "Janeiro")
-         * @return 
-         */
-        public String getDataMes()
-        {
-            String mes = null;
-            
-            StringTokenizer token = new StringTokenizer(this.data_nascimento);
-            
-            for(int i = 1; i <= token.countTokens(); i++)
-            {
-                if(i == 3)
-                {
-                    mes = token.nextToken();
-                }
-                else
-                    token.nextToken();
-            }
-            return mes;
-        }
-        
-        /**
-         * Faz um parse à data de nascimento e retorna o ano
-         * @return 
-         */
-        public String getDataAno()
-        {
-            String ano = null;
-            
-            StringTokenizer token = new StringTokenizer(this.data_nascimento);
-            System.out.println(data_nascimento);
-            
-            while(token.hasMoreElements())                
-                ano = token.nextToken();
-        
-            return ano;
-        }
 
 	/**
 	 * 
